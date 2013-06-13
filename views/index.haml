@@ -1,0 +1,16 @@
+%link(rel="stylesheet" media="all" href="/stylesheets/app.css")
+%link{:href=>"http://fonts.googleapis.com/css?family=Nosifer", :rel=>'stylesheet', :type=>'text/css'}
+%script(src="/javascripts/jquery-1.4.2.min.js")
+
+.container
+  .banner
+    %h1 Coming 2014
+    
+:javascript
+  $(document).ready(function(){
+    window.setTimeout(bleed,3000)
+  });
+  
+  function bleed() {
+    $('.banner').addClass("bleed");
+  };
