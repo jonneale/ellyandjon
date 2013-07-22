@@ -16,125 +16,6 @@
                 %a#home_img.navbarSprite{:href => "/", :onclick => "(new Image()).src='/rg/home/navbar/images/b.gif?link=/';", :title => "Home"}
                 %span.alt_logo
                   %a{:href => "/", :onclick => "(new Image()).src='/rg/home/navbar/images/b.gif?link=/';", :title => "Home"} IMDb
-              %form#navbar-form.nav-searchbar-inner{:action => "/find", :method => "get", :onsubmit => "(new Image()).src='/rg/SEARCH-BOX/HEADER/images/b.gif?link=/find';"}
-                #nb_search
-                  %noscript
-                    #more_if_no_javascript
-                      %a{:href => "/search/"} More
-                  %button#navbar-submit-button.primary.btn{:type => "submit"}
-                    .magnifyingglass.navbarSprite
-                  %input#navbar-query{:autocomplete => "off", :name => "q", :placeholder => "Find Movies, TV shows, Celebrities and more...", :type => "text", :value => ""}/
-                  .quicksearch_dropdown_wrapper
-                    %select#quicksearch.quicksearch_dropdown.navbarSprite{:name => "s", :onchange => "jumpMenu(this); suggestionsearch_dropdown_choice(this);"}
-                      %option{:value => "all"} All
-                      %option{:value => "tt"} Titles
-                      %option{:value => "ep"} TV Episodes
-                      %option{:value => "nm"} Names
-                      %option{:value => "co"} Companies
-                      %option{:value => "kw"} Keywords
-                      %option{:value => "ch"} Characters
-                      %option{:value => "vi"} Videos
-                      %option{:value => "qu"} Quotes
-                      %option{:value => "bi"} Bios
-                      %option{:value => "pl"} Plots
-                  #navbar-suggestionsearch
-              #nb_personal
-                %ul#consumer_user_nav.main_nav
-                  %li
-                    %a#nblogin.navbarSprite{:href => "/register/login?ref_=nb_usr_lgin", :rel => "login"} Login
-                    %ul.sub_nav
-                      %li
-                        %a{:href => "https://secure.imdb.com/register-imdb/form-v2?ref_=nb_usr_reg"} Register
-                      %li
-                        %a#nblogin{:href => "/register/login?ref_=nb_usr_lgin", :rel => "login"} Login
-                %span.ghostOnDark |
-                \ 
-                %a{:href => "/help/", :onclick => "(new Image()).src='/rg/help/navbar/images/b.gif?link=/help/';"} Help
-              %div
-                %ul#consumer_main_nav.main_nav
-                  %li.css_nav_item{"aria-haspopup" => "true"}
-                    %a.navbarSprite{:href => "/movies-in-theaters/?ref_=nb_mv_1_inth"} Movies
-                    %ul.sub_nav
-                      %li
-                        %a{:href => "/movies-in-theaters/?ref_=nb_mv_2_inth"} In Theaters
-                      %li
-                        %a{:href => "/chart/top?ref_=nb_mv_3_chttp"} Top 250
-                      %li
-                        %a{:href => "/chart/?ref_=nb_mv_4_cht"} US Box Office
-                      %li
-                        %a{:href => "/movies-coming-soon/?ref_=nb_mv_5_cs"} Coming Soon
-                      %li
-                        %a{:href => "/trailers?ref_=nb_mv_6_tr"} Trailer Gallery
-                      %li
-                        %a{:href => "/watchnow/?ref_=nb_mv_7_wn"} Watch Now on AIV
-                      %li
-                        %a{:href => "/sections/dvd/?ref_=nb_mv_8_dvd"} On DVD & Blu-Ray
-                      %li
-                        %a{:href => "/x-ray/?ref_=nb_mv_9_xray"} X-Ray for Movies & TV
-                      %li
-                        %a{:href => "/oscars/?ref_=nb_mv_10_rto"} Road to the Oscars
-                  %li.css_nav_item{"aria-haspopup" => "true"}
-                    %a.navbarSprite{:href => "/tv/?ref_=nb_tv_1_hm"} TV
-                    %ul.sub_nav
-                      %li
-                        %a{:href => "/tv/?ref_=nb_tv_2_hm"} TV Home
-                      %li
-                        %a{:href => "/search/title?num_votes=5000,&sort=user_rating,desc&title_type=tv_series&ref_=nb_tv_3_srs"} Top TV Series
-                      %li
-                        %a{:href => "/tvgrid/?ref_=nb_tv_4_ls"} TV Listings
-                      %li
-                        %a{:href => "/features/video/tv/?ref_=nb_tv_5_ep"} TV Episodes
-                  %li.css_nav_item{"aria-haspopup" => "true"}
-                    %a.navbarSprite{:href => "/news/top?ref_=nb_nw_1_tp"} News
-                    %ul.sub_nav
-                      %li
-                        %a{:href => "/news/top?ref_=nb_nw_2_tp"} Top News
-                      %li
-                        %a{:href => "/news/movie?ref_=nb_nw_3_mv"} Movie News
-                      %li
-                        %a{:href => "/news/tv?ref_=nb_nw_4_tv"} TV News
-                      %li
-                        %a{:href => "/news/celebrity?ref_=nb_nw_5_cel"} Celebrity News
-                  %li.css_nav_item{"aria-haspopup" => "true"}
-                    %a.navbarSprite{:href => "/showtimes/?ref_=nb_sh_1_sh"} Showtimes
-                    %ul.sub_nav
-                      %li
-                        %a{:href => "/showtimes/?ref_=nb_sh_2_sh"} Movie Showtimes
-                  %li.css_nav_item{"aria-haspopup" => "true"}
-                    %a.navbarSprite{:href => "/boards/?ref_=nb_cm_1_bd"} Community
-                    %ul.sub_nav
-                      %li
-                        %a{:href => "/boards/?ref_=nb_cm_2_bd"} Message Boards
-                      %li
-                        %a{:href => "/lists?ref_=nb_cm_3_nls"} Newest Lists
-                      %li
-                        %a{:href => "/profile/lists?ref_=nb_cm_4_yls"} Your Lists
-                      %li
-                        %a{:href => "/list/ratings?ref_=nb_cm_5_yrt"} Your Ratings
-                      %li
-                        %a{:href => "/czone/?ref_=nb_cm_6_cz"} Contributor Zone
-                      %li
-                        %a{:href => "/games/guess?ref_=nb_cm_7_qz"} Quiz Game
-                  %li.css_nav_item{"aria-haspopup" => "true"}
-                    %a.navbarSprite{:href => "/r/IMDbTabNB/", :onclick => "(new Image()).src='/rg/imdbprohome/navbar/images/b.gif?link=/r/IMDbTabNB/';"} IMDbPro
-                    %ul.sub_nav
-                      %li
-                        %a{:href => "/r/nm_ovrview_contact/representation/", :onclick => "(new Image()).src='/rg/procontact/navbar/images/b.gif?link=/r/nm_ovrview_contact/representation/';"} Contact Info
-                      %li
-                        %a{:href => "/r/Resume/resume/update/photos", :onclick => "(new Image()).src='/rg/photos/navbar/images/b.gif?link=/r/Resume/resume/update/photos';"} Add Photos
-                  %li.css_nav_item{"aria-haspopup" => "true"}
-                    %a.navbarSprite{:href => "/apps/?ref_=nb_app_1_hm"} Apps
-                    %ul.sub_nav
-                      %li
-                        %a{:href => "/apps/?ref_=nb_app_2_hm"} Apps Home
-                      %li
-                        %a{:href => "/apps/ios/?ref_=nb_app_3_ios"} iPhone + iPad Apps
-                      %li
-                        %a{:href => "/apps/android/?ref_=nb_app_4_andr"} Android Apps
-                      %li
-                        %a{:href => "/apps/kindlefire/?ref_=nb_app_5_fire"} Kindle Fire App
-              .nb_extra
-                %a{:href => "/list/watchlist", :onclick => "(new Image()).src='/rg/watchlist/navbar/images/b.gif?link=/list/watchlist';"} Your Watchlist
           #pagecontent{:itemscope => "", :itemtype => "http://schema.org/Movie"}
             #content-2-wide.redesign
               #maindetails_center_top.maindetails_center
@@ -182,7 +63,7 @@
                               \ - 
                               %span.nobr
                                 %a{:href => "/title/tt0371746/releaseinfo?ref_=tt_ov_inf ", :title => "See all release dates"}
-                                  21 June 2014
+                                  5 July 2014
                                   %meta{:content => "2014-06-21", :itemprop => "datePublished"}/
                                   (Brighton, UK)
                             .star-box.giga-star
@@ -277,69 +158,12 @@
                                 %a{:href => "#titleCast", :itemprop => "url"} See full cast and crew
                             %tr
                               %td#overview-bottom
-                                .wlb_classic_wrapper
-                                  %span.wlb_wrapper
-                                    %a.wlb_watchlist_btn{"data-caller-name" => "title", "data-size" => "large", "data-tconst" => "tt0371746", "data-type" => "primary  "}
-                                    %a.wlb_dropdown_btn{"data-caller-name" => "title", "data-size" => "large", "data-tconst" => "tt0371746", "data-type" => "primary"  }
-                                  .wlb_dropdown_list{:style => "display:none;"}
-                                  .wlb_alert{:style => "display:none"}
-                                %a.btn2.btn2_text_on.large.title-trailer.video-colorbox{"data-context" => "imdb", "data-tconst" => "tt0371746", "data-type" => "  recommends", "data-video" => "vi447873305", :href => "/video/imdb/vi447873305/?ref_=tt_ov_vi", :itemprop => "trailer"}
-                                  %span.btn2_text Watch Trailer
-                                #share-checkin
-                                  .add_to_checkins{"data-const" => "tt0371746", "data-lcn" => "title-maindetails"}
-                                    %span.btn2_wrapper
-                                      %a.btn2.large.btn2_text_on.disabled.checkins_action_btn{:onclick => ""}
-                                        %span.btn2_glyph 0
-                                        %span.btn2_text Check in
-                                    .popup.checkin-dialog
-                                      %a.small.disabled.close.btn X
-                                      %span.beta Beta
-                                      %span.title I'm Watching This!
-                                      .body
-                                        .info
-                                          Keep track of everything you watch; tell your friends.
-                                          .info_details
-                                            If your account is linked with Facebook and you have turned on sharing, this will show up in your activity feed. If not,   you can turn on sharing
-                                            %a{:href => "https://secure.imdb.com/register-imdb/sharing?ref=tt_checkin_share", :onclick => "(new Image()).src='/rg/  unknown/unknown/images/b.gif?link=https://secure.imdb.com/register-imdb/sharing?ref=tt_checkin_share';"} here
-                                            \.
-                                        .small.message_box
-                                          .hidden.error
-                                            %h2 Error
-                                            Please try again!
-                                          .hidden.success
-                                            %h2 Added to Your Check-Ins.
-                                            %a{:href => "/list/checkins"} View
-                                        %textarea{"data-msg" => "Enter a comment..."}
-                                        .share
-                                          %button.large.primary.btn
-                                            %span Check in
-                                          /
-                                            Check-ins are more fun when<br>
-                                            you <a href="/register/sharing">enable Facebook sharing</a>!
-                                    %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
+                                %a.btn2.btn2_text_on.large{:href => "mailto:rsvp@ellyandjon.com"}
+                                  %span.btn2_text RSVP
                                 %span.btn2_wrapper
-                                  %a.btn2.large.btn2_text_on.launch-share-popover{:onclick => ""}
-                                    %span.btn2_glyph 0
-                                    %span.btn2_text Share...
-                                #share-popover
-                                  %a.close-popover{:href => "#"} X
-                                  %h4 Share
-                                  %a.facebook{:href => "http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.imdb.com%2Frg%2Fs%2F3%2Ftitle%2Ftt0371746", :onclick =>   "window.open('http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.imdb.com%2Frg%2Fs%2F3%2Ftitle%2Ftt0371746', 'newWindow',   'width=626,height=436'); return false;", :target => "_blank", :title => "Share on Facebook"}
-                                  .option.facebook
-                                    %span.titlePageSprite.share_facebook
-                                    %div Facebook
-                                  %a.twitter{:href => "http://twitter.com/home?status=Iron%20Man%20(2008)%20-%20http%3A%2F%2Fwww.imdb.  com%2Frg%2Fs%2F1%2Ftitle%2Ftt0371746", :onclick => "window.open('http://twitter.com/  home?status=Iron%20Man%20(2008)%20-%20http%3A%2F%2Fwww.imdb.com%2Frg%2Fs%2F1%2Ftitle%2Ftt0371746', 'newWindow', 'width=815,  height=436'); return false;", :target => "_blank", :title => "Share on Twitter"}
-                                  .option.twitter
-                                    %span.titlePageSprite.share_twitter
-                                    %div Twitter
-                                  %a{:href => "mailto:?subject=IMDb%3A%20Iron%20Man%20(2008)&body=IMDb%3A%20Iron%20Man%20(2008)%0AWhen%20wealthy%20industrialist%20To  ny%20Stark%20is%20forced%20to%20build%20an%20armored%20suit%20after%20a%20life-threatening%20incident%2C%20he%20ultimately%20decide  s%20to%20use%20its%20technology%20to%20fight%20against%20evil.%0Ahttp%3A%2F%2Fwww.imdb.  com%2Frg%2Fem_share%2Ftitle_web%2Ftitle%2Ftt0371746", :title => "Share by e-mail"}
-                                  .option.email
-                                    %span.titlePageSprite.share_email
-                                    %div E-mail
-                                  %a.open-checkin-popover{:href => "#"}
-                                  .option.checkin
-                                    %span.titlePageSprite.share_checkin
-                                    %div Check in
+                                  %a.btn2.large.btn2_text_on{:href=>"#titleDetails"}
+                                    
+                                    %span.btn2_text Details...
                     
               #maindetails_sidebar_top.maindetails_sidebar
                 / begin TOP_RHS
@@ -354,13 +178,13 @@
                     .split_0
                       %ul.quicklinks
                         %li.subnav_item_main
-                          %a.link{:href => "/title/tt0371746/fullcredits?ref_=tt_ql_1"} Full Cast and Crew
+                          %a.link{:href => "#titleCast"} Full Cast and Crew
                         %li.subnav_item_main
-                          %a.link{:href => "/title/tt0371746/trivia?ref_=tt_ql_2"} Trivia
+                          %a.link{:href => "#titleDetails"} Details
                         %li.subnav_item_main
-                          %a.link{:href => "/title/tt0371746/quotes?ref_=tt_ql_3"} Quotes
+                          %a.link{:href => "#titleStoryLine"} Storyline
                         %li.subnav_item_main
-                          %a.link{:href => "/title/tt0371746/awards?ref_=tt_ql_4"} Awards
+                          %a.link{:href => "#titleTechnicalSpecs"} Technical Specs
                         %li.subnav_item_main
                           %a.link{:href => "/title/tt0371746/board/?ref_=tt_ql_5"} Message Board
                     .split_1
@@ -376,259 +200,7 @@
                         %li.subnav_item_main
                           %a.link{:href => "/title/tt0371746/companycredits?ref_=tt_ql_10"} Company Credits
                   %hr/
-                  #full_subnav
-                    %h4 Details
-                    %ul.quicklinks
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/fullcredits?ref_=tt_ql_dt_1"} Full Cast and Crew
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/releaseinfo?ref_=tt_ql_dt_2"} Release Dates
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/officialsites?ref_=tt_ql_dt_3"} Official Sites
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/business?ref_=tt_ql_dt_4"} Box Office/Business
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/companycredits?ref_=tt_ql_dt_5"} Company Credits
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/locations?ref_=tt_ql_dt_6"} Filming Locations
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/technical?ref_=tt_ql_dt_7"} Technical Specs
-                      %li.subnav_item_main
-                        %a.link.empty{:href => "/title/tt0371746/literature?ref_=tt_ql_dt_8"} Literature
-                    %h4 Storyline
-                    %ul.quicklinks
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/taglines?ref_=tt_ql_stry_1"} Taglines
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/plotsummary?ref_=tt_ql_stry_2"} Plot Summary
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/synopsis?ref_=tt_ql_stry_3"} Synopsis
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/keywords?ref_=tt_ql_stry_4"} Plot Keywords
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/parentalguide?ref_=tt_ql_stry_5"} Parents Guide
-                    %h4 Did You Know?
-                    %ul.quicklinks
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/trivia?ref_=tt_ql_trv_1"} Trivia
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/goofs?ref_=tt_ql_trv_2"} Goofs
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/crazycredits?ref_=tt_ql_trv_3"} Crazy Credits
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/quotes?ref_=tt_ql_trv_4"} Quotes
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/alternateversions?ref_=tt_ql_trv_5"} Alternate Versions
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/movieconnections?ref_=tt_ql_trv_6"} Connections
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/soundtrack?ref_=tt_ql_trv_7"} Soundtracks
-                    %h4 Photo & Video
-                    %ul.quicklinks
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/mediaindex?ref_=tt_ql_pv_1"} Photo Gallery
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/videogallery?ref_=tt_ql_pv_2"} Trailers and Videos
-                    %h4 Opinion
-                    %ul.quicklinks
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/awards?ref_=tt_ql_op_1"} Awards
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/faq?ref_=tt_ql_op_2"} FAQ
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/reviews?ref_=tt_ql_op_3"} User Reviews
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/ratings?ref_=tt_ql_op_4"} User Ratings
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/externalreviews?ref_=tt_ql_op_5"} External Reviews
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/criticreviews?ref_=tt_ql_op_6"} Metacritic Reviews
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/board/?ref_=tt_ql_op_7"} Message Board
-                    %h4 External Links
-                    %ul.quicklinks
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/miscsites?ref_=tt_ql_ex_1"} Miscellaneous
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/soundsites?ref_=tt_ql_ex_2"} Sound Clips
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/videosites?ref_=tt_ql_ex_3"} Video Clips
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/photosites?ref_=tt_ql_ex_4"} Photographs
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/posters?ref_=tt_ql_ex_5"} Posters
-                    %h4 TV
-                    %ul.quicklinks
-                      %li.subnav_item_main
-                        %a.link.empty{:href => "/title/tt0371746/tvschedule?ref_=tt_ql_tv_1"} TV Schedule
-                    %h4 Related Items
-                    %ul.quicklinks
-                      %li.subnav_item_main
-                        %a.link{:href => "/title/tt0371746/news?ref_=tt_ql_rel_1"} NewsDesk
-                      %li.subnav_item_main
-                        %a.link.empty{:href => "/showtimes/title/tt0371746?ref_=tt_ql_rel_2"} Showtimes
-                    %h4 Professional Services
-                    %ul.quicklinks
-                      %li.subnav_item_main
-                        %a.link{:href => "/r/tt_moviemeter_why/title/tt0371746?ref_=tt_ql_pro_1"} Get more at IMDbPro
-                      %li.subnav_item_main
-                        %a.link{:href => "https://secure.imdb.com/store/photos/?ref_=tt_ql_pro_2"} Add posters & stills to this title
-                    %hr/
-                  .show_more
-                    %span.titlePageSprite.arrows.show>
-                    Explore More
-                  .show_less
-                    %span.titlePageSprite.arrows.hide>
-                    Show Less
-                  .aux-content-widget-2
-                    .social
-                    .aux-content-widget-2
-                    %h3 Related News
-                    .news_item.odd
-                      %span{:itemprop => "headline"}
-                        %a{:href => "/title/tt0371746/news?ref_=tt_nwr_1#ni55945052"} Terry Crews Is A Geek. Seriously
-                      %br/
-                      %small
-                        %span{:itemprop => "datePublished"}
-                          8 hours ago
-                        %span.ghost |
-                        %span{:itemprop => "provider"}
-                          %a{:href => "/news/ns0000218?ref_=tt_nwr_1"} Huffington Post
-                    .news_item.even
-                      %span{:itemprop => "headline"}
-                        %a{:href => "/title/tt0371746/news?ref_=tt_nwr_2#ni55944966"} #Sdcc 2013: Final Two Seventh Son Posters Complete the Set of Seven
-                      %br/
-                      %small
-                      %span{:itemprop => "datePublished"}
-                        9 hours ago
-                      %span.ghost |
-                      %span{:itemprop => "provider"}
-                        %a{:href => "/news/ns0000039?ref_=tt_nwr_2"} DreadCentral.com
-                    .news_item.odd
-                      %span{:itemprop => "headline"}
-                        %a{:href => "/title/tt0371746/news?ref_=tt_nwr_3#ni55944697"} 'Agents of Shield' at Comic-Con: Spoilers from the pilot screening
-                      %br/
-                      %small
-                        %span{:itemprop => "datePublished"}
-                          9 hours ago
-                        %span.ghost |
-                        %span{:itemprop => "provider"}
-                          %a{:href => "/news/ns0000065?ref_=tt_nwr_3"} Zap2It - From Inside the Box
-                    .see-more
-                      %a{:href => "/title/tt0371746/news?ref_=tt_nwr_sm"}> See all 20355 related articles
-                      \ »
-                      .aux-content-widget-2
-                      #relatedListsWidget
-                        .rightcornerlink
-                          %a{:href => "/list/create?ref_=tt_rls"}> Create a list
-                          \ »
-                        %h3 User Lists
-                        %p Related lists from IMDb users
-                        .list-preview.even
-                          .list-preview-item-narrow
-                            %a{:href => "/list/TtKgd8kQx8Q/?ref_=tt_rls_1"}
-                              %img.loadlate.hidden.rec_poster_img{:alt => "list image", :height => "86", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTc4NTQwNjIzNl5BMl5BanBnXkFtZTcwNTg0NjQwMw@@._V1_SX86_CR0,0,86,86_.jpg", :src => "/images/nopicture/medium/film.png", :title => "list image", :width => "86"}/
-                            %noscript
-                              %img.rec_poster_img{:alt => "list image", :height => "86", :src => "http://ia.media-imdb.com/images/M/MV5BMTc4NTQwNjIzNl5BMl5BanBnXkFtZTcwNTg0NjQwMw@@._V1_SX86_CR0,0,86,86_.jpg", :title => "list image", :width => "86"}/
-                          .list_name
-                            %b
-                              %a{:href => "/list/TtKgd8kQx8Q/?ref_=tt_rls_1"} MY ULTIMATE BEST MOVIES: 2000-2013
-                          .list_meta
-                            a list of 9.4 titles
-                            created 03 May 2011
-                          .clear  
-                        .list-preview.odd
-                          .list-preview-item-narrow
-                            %a{:href => "/list/ie7GUkcIZKE/?ref_=tt_rls_2"}
-                              %img.loadlate.hidden.rec_poster_img{:alt => "list image", :height => "86", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX86_CR0,0,86,86_.jpg", :src => "/images/nopicture/medium/film.png", :title => "list image", :width => "86"}/
-                            %noscript
-                              %img.rec_poster_img{:alt => "list image", :height => "86", :src => "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX86_CR0,0,86,86_.jpg", :title => "list image", :width => "86"}/
-                          .list_name
-                            %b
-                              %a{:href => "/list/ie7GUkcIZKE/?ref_=tt_rls_2"} 37 Best Action Movies from 2000-2013
-                          .list_meta
-                            a list of 37 titles
-                            created 3 months ago
-                          .clear  
-                        .list-preview.even
-                          .list-preview-item-narrow
-                            %a{:href => "/list/eD4QwublmY0/?ref_=tt_rls_3"}
-                              %img.loadlate.hidden.rec_poster_img{:alt => "list image", :height => "86", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTU3NzA5MjI0Nl5BMl5BanBnXkFtZTcwMTEwNzMzMQ@@._V1_SX86_CR0,0,86,86_.jpg", :src => "/images/nopicture/medium/film.png", :title => "list image", :width => "86"}/
-                            %noscript
-                              %img.rec_poster_img{:alt => "list image", :height => "86", :src => "http://ia.media-imdb.com/images/M/MV5BMTU3NzA5MjI0Nl5BMl5BanBnXkFtZTcwMTEwNzMzMQ@@._V1_SX86_CR0,0,86,86_.jpg", :title => "list image", :width => "86"}/
-                          .list_name
-                            %b
-                              %a{:href => "/list/eD4QwublmY0/?ref_=tt_rls_3"} Best SUPERHERO Movies
-                          .list_meta
-                            a list of 41 titles
-                            created 8 months ago
-                          .clear  
-                        .list-preview.odd
-                          .list-preview-item-narrow
-                            %a{:href => "/list/p9TV548tyOw/?ref_=tt_rls_4"}
-                              %img.loadlate.hidden.rec_poster_img{:alt => "list image", :height => "86", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMjE0MDAwNTUzNF5BMl5BanBnXkFtZTcwNDQ4NDYxOQ@@._V1_SX86_CR0,0,86,86_.jpg", :src => "/images/nopicture/medium/film.png", :title => "list image", :width => "86"}/
-                            %noscript
-                              %img.rec_poster_img{:alt => "list image", :height => "86", :src => "http://ia.media-imdb.com/images/M/MV5BMjE0MDAwNTUzNF5BMl5BanBnXkFtZTcwNDQ4NDYxOQ@@._V1_SX86_CR0,0,86,86_.jpg", :title => "list image", :width => "86"}/
-                          .list_name
-                            %b
-                              %a{:href => "/list/p9TV548tyOw/?ref_=tt_rls_4"} All U.S. Released Movies: 1970-2014
-                          .list_meta
-                            a list of 10000 titles
-                            created 4 months ago
-                          .clear  
-                        .list-preview.even
-                          .list-preview-item-narrow
-                            %a{:href => "/list/pVYAHEEl21Q/?ref_=tt_rls_5"}
-                              %img.loadlate.hidden.rec_poster_img{:alt => "list image", :height => "86", :loadlate => "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX86_CR0,0,86,86_.jpg", :src => "/images/nopicture/medium/film.png", :title => "list image", :width => "86"}/
-                            %noscript
-                              %img.rec_poster_img{:alt => "list image", :height => "86", :src => "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX86_CR0,0,86,86_.jpg", :title => "list image", :width => "86"}/
-                          .list_name
-                            %b
-                              %a{:href => "/list/pVYAHEEl21Q/?ref_=tt_rls_5"} Allready Watched
-                          .list_meta
-                            a list of 317 titles
-                            created 06 Nov 2011
-                          .clear  
-                        .see-more
-                          %a{:href => "/lists/tt0371746?ref_=tt_rls_sm"}> See all related lists
-                          \ »
-                      .aux-content-widget-2
-                        %h3 Connect with IMDb
-                        #facebookWrapper
-                          %iframe#facebookIframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "http://www.facebook.com/plugins/likebox.php?href=facebook.com%2Fimdb&width=300&connections=5&stream=false&header=false&height=190"}
-                        %hr/
-                        %iframe#twitterIframe{:allowtransparency => "true", :frameborder => "0", :role => "presentation", :scrolling => "no", :src => "http://i.media-imdb.com/images/social/twitter.html?10#imdb"}
-                      .aux-content-widget-2
-                        #ratingWidget
-                          %h3 Share this Rating
-                          %p
-                            Title:
-                            %strong Iron Man
-                            (2008)
-                          %span.imdbRatingPlugin.imdbRatingStyle1{"data-style" => "t1", "data-title" => "tt0371746", "data-user" => ""}
-                            %img{:alt => "Elly and Jon are getting married (2014) on IMDb", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/plugins/imdb_46x22-2264473254._V377175616_.png"}/
-                            %span.rating
-                              9.4
-                              %span.ofTen /10
-                            %img.star{:src => "http://ia.media-imdb.com/images/G/01/imdb/images/plugins/imdb_star_22x21-2889147855._V377175623_.png"}/
-                          %p Want to share IMDb's rating on your own site? Use the HTML below.
-                          #ratingPluginHTML.hidden
-                            .message_box.small
-                              .error
-                                %p
-                                  You must be a registered user to use the IMDb rating plugin.
-                                %a.cboxElement{:href => "/register/login?ref_=tt_plg_rt", :rel => "login"} Login
-                          #ratingWidgetLinks
-                            %span.titlePageSprite.arrows.show
-                            %a#toggleRatingPluginHTML{:href => "/plugins?titleId=tt0371746&ref_=tt_plg_rt", :itemprop => "url"} Show HTML
-                            %a{:href => "/plugins?titleId=tt0371746&ref_=tt_plg_rt", :itemprop => "url"} View more styles
-                      .aux-content-widget-2.play_quiz_widget
-                      %h3 Take The Quiz!
-                      %a.icon{:href => "/games/guess/tt0371746?ref_=tt_qz"}
-                      %span
-                        Test your knowledge of
-                        %a{:href => "/games/guess/tt0371746?ref_=tt_qz"} 
-                        Iron Man
+                 
               #maindetails_center_bottom.maindetails_center
                 #titleAwardsRanks.article.highlighted
                   %span{:itemprop => "awards"}
@@ -642,16 +214,14 @@
                     #combined-photos
                       %h2 Photos
                       .mediastrip
-                        %a{:href => "/media/rm773098496/tt0371746?ref_=tt_pv_md_1", :itemprop => "thumbnailUrl"}
-                          %img{:alt => "Still of Jeff Bridges and Robert Downey Jr. in Iron Man", :height => "105", :itemprop => "image", :src => "http://ia.media-imdb.com/images/M/MV5BMTYxOTk1MTE4N15BMl5BanBnXkFtZTcwODkxNTIzMw@@._V1_SY105_CR26,0,105,105_.jpg", :title => "Still of Jeff Bridges and   Robert Downey Jr. in Iron Man", :width => "105"}/
-                        %a{:href => "/media/rm3357050880/tt0371746?ref_=tt_pv_md_2", :itemprop => "thumbnailUrl"}
-                          %img{:alt => "Iron Man props at Hasbro booth", :height => "105", :itemprop => "image", :src => "http://ia.media-imdb.com/images/M/MV5BMTk3ODQ2NTY4NV5BMl5BanBnXkFtZTcwNDk4MDM3Mg@@._V1_SX105_CR0,0,105,105_.jpg", :title => "Iron Man props at Hasbro booth", :width => "105"  }/
-                        %a{:href => "/media/rm504663040/tt0371746?ref_=tt_pv_md_3", :itemprop => "thumbnailUrl"}
-                          %img{:alt => "Iron Man", :height => "105", :itemprop => "image", :src => "http://ia.media-imdb.com/images/M/MV5BMTczNzM5OTAyMF5BMl5BanBnXkFtZTcwNTEzNTIzMw@@._V1_SY105_CR41,0,105,105_.jpg", :title => "Iron Man", :width => "105"}/
-                        %a{:href => "/media/rm773098496/tt0371746?ref_=tt_pv_md_1", :itemprop => "thumbnailUrl"}
-                          %img{:alt => "Still of Jeff Bridges and Robert Downey Jr. in Iron Man", :height => "105", :itemprop => "image", :src => "http://ia.media-imdb.com/images/M/MV5BMTYxOTk1MTE4N15BMl5BanBnXkFtZTcwODkxNTIzMw@@._V1_SY105_CR26,0,105,105_.jpg", :title => "Still of Jeff Bridges and   Robert Downey Jr. in Iron Man", :width => "105"}/
-                        %a{:href => "/media/rm3357050880/tt0371746?ref_=tt_pv_md_2", :itemprop => "thumbnailUrl"}
-                          %img{:alt => "Iron Man props at Hasbro booth", :height => "105", :itemprop => "image", :src => "http://ia.media-imdb.com/images/M/MV5BMTk3ODQ2NTY4NV5BMl5BanBnXkFtZTcwNDk4MDM3Mg@@._V1_SX105_CR0,0,105,105_.jpg", :title => "Iron Man props at Hasbro booth", :width => "105"  }/
+                        %a{:href => "/images/past-photos/big/newyork.jpg"}
+                          %img{:alt => "Still of Elly and Jon visiting the Empire State Building in New York", :title => "Still of Elly and Jon visiting the Empire State Building in New York", :src => "/images/past-photos/small/newyork.jpg"}/
+                        %a{:href => "/images/past-photos/big/menorca.jpg"}
+                          %img{:alt => "Still of Elly and Jon's holiday in Menorca", :title => "Still of Elly and Jon's holiday in Menorca", :src => "/images/past-photos/small/menorca.jpg"}/
+                        %a{:href => "/images/past-photos/big/barcelona.jpg"}
+                          %img{:alt => "Still of Elly and Jon visiting Barcelona", :title => "Still of Elly and Jon visiting Barcelona", :src => "/images/past-photos/small/barcelona.jpg"}/
+                        %a{:href => "/images/past-photos/big/olympics.jpg"}
+                          %img{:alt => "Still of Elly and Jon at the London Olympics games", :title => "Still of Elly and Jon at the London Olympics games", :src => "/images/past-photos/small/olympics.jpg"}/  
                     .combined-see-more.see-more
                       %a{:href => "/title/tt0371746/mediaindex?ref_=tt_pv_mi_sm"}
                         %span.titlePageSprite.showAllVidsAndPics
@@ -661,1139 +231,6 @@
                       %span |
                       %a{:href => "/title/tt0371746/news?ref_=tt_pv_nw_sm"} 20355 news articles
                       \»
-                #titleRecs.article
-                  %span.rightcornerlink
-                    %a{:href => "/help/show_leaf?personalrecommendations&ref_=tt_rec_lm"} Learn more
-                  %h2.rec_heading_wrapper
-                    %span.rec_heading{"data-spec" => "p13nsims:tt0371746"} People who liked this also liked... 
-                  #title_recs.rec_wrapper{"data-caller-name" => "p13nsims-title", "data-items-per-page" => "6", "data-items-per-request" => "24", "data-specs" => "p13nsims:tt0371746"}
-                    .rec_const_picker
-                      .rec_view
-                        .rec_grave{:style => "display:none"}
-                        .rec_slide
-                          .rec_page
-                            .rec_item{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0093773"}
-                              .rec_overlay
-                                .rec_filter
-                                .glyph.rec_watchlist_glyph
-                                .glyph.rec_blocked_glyph
-                                .glyph.rec_rating_glyph
-                                .glyph.rec_pending_glyph
-                              %a{:href => "/title/tt0093773/?ref_=tt_rec_tti"}
-                                %img.loadlate.hidden.rec_poster_img{:alt => "Predator", :height => "113", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTM1Njk0MjIwN15BMl5BanBnXkFtZTcwNzgwNzEyMQ@@._V1_SY113_CR1,0,76,113_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/film-293970583._V394978416_.png", :title => "Predator", :width => "76"}/
-                                %br/
-                            .rec_item{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0116629"}
-                              .rec_overlay
-                                .rec_filter
-                                .glyph.rec_watchlist_glyph
-                                .glyph.rec_blocked_glyph
-                                .glyph.rec_rating_glyph
-                                .glyph.rec_pending_glyph
-                              %a{:href => "/title/tt0116629/?ref_=tt_rec_tti"}
-                                %img.loadlate.hidden.rec_poster_img{:alt => "Independence Day", :height => "113", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTMwODY3NzQzNF5BMl5BanBnXkFtZTcwNzUxNjc0MQ@@._V1_SY113_CR2,0,76,113_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/film-293970583._V394978416_.png", :title => "Independence Day", :width => "76"}/
-                                %br/
-                            .rec_item{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0084726"}
-                              .rec_overlay
-                                .rec_filter
-                                .glyph.rec_watchlist_glyph
-                                .glyph.rec_blocked_glyph
-                                .glyph.rec_rating_glyph
-                                .glyph.rec_pending_glyph
-                              %a{:href => "/title/tt0084726/?ref_=tt_rec_tti"}
-                                %img.loadlate.hidden.rec_poster_img{:alt => "Star Trek II: The Wrath of Khan", :height => "113", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTcwNjc5NjA4N15BMl5BanBnXkFtZTcwNDk5MzI4OA@@._V1_SX76_CR0,0,76,113_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/film-293970583._V394978416_.png", :title => "Star Trek II: The Wrath of Khan", :width => "76"}/
-                                %br/
-                            .rec_item{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0379786"}
-                              .rec_overlay
-                                .rec_filter
-                                .glyph.rec_watchlist_glyph
-                                .glyph.rec_blocked_glyph
-                                .glyph.rec_rating_glyph
-                                .glyph.rec_pending_glyph
-                              %a{:href => "/title/tt0379786/?ref_=tt_rec_tti"}
-                                %img.loadlate.hidden.rec_poster_img{:alt => "Serenity", :height => "113", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTI0NTY1MzY4NV5BMl5BanBnXkFtZTcwNTczODAzMQ@@._V1_SY113_CR0,0,76,113_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/film-293970583._V394978416_.png", :title => "Serenity", :width => "76"}/
-                                %br/
-                            .rec_item{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0117731"}
-                              .rec_overlay
-                                .rec_filter
-                                .glyph.rec_watchlist_glyph
-                                .glyph.rec_blocked_glyph
-                                .glyph.rec_rating_glyph
-                                .glyph.rec_pending_glyph
-                              %a{:href => "/title/tt0117731/?ref_=tt_rec_tti"}
-                                %img.loadlate.hidden.rec_poster_img{:alt => "Star Trek: First Contact", :height => "113", :loadlate => "http://ia.media-imdb.com/images/M/MV5BNTc1NjMzODU1MF5BMl5BanBnXkFtZTYwMjAwNjk4._V1_SY113_CR2,0,76,113_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/film-293970583._V394978416_.png", :title => "Star Trek: First Contact", :width => "76"}/
-                                %br/
-                            .rec_item{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0100802"}
-                              .rec_overlay
-                                .rec_filter
-                                .glyph.rec_watchlist_glyph
-                                .glyph.rec_blocked_glyph
-                                .glyph.rec_rating_glyph
-                                .glyph.rec_pending_glyph
-                              %a{:href => "/title/tt0100802/?ref_=tt_rec_tti"}
-                                %img.loadlate.hidden.rec_poster_img{:alt => "Total Recall", :height => "113", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTc2MTU4ODI5MF5BMl5BanBnXkFtZTcwODI2MzAyOA@@._V1_SY113_CR2,0,76,113_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/film-293970583._V394978416_.png", :title => "Total Recall", :width => "76"}/
-                                %br/
-                          .rec_page
-                            .rec_item{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0082694"}
-                              .rec_overlay
-                                .rec_filter
-                                .glyph.rec_watchlist_glyph
-                                .glyph.rec_blocked_glyph
-                                .glyph.rec_rating_glyph
-                                .glyph.rec_pending_glyph
-                              %a{:href => "/title/tt0082694/?ref_=tt_rec_tti"}
-                                %img.loadlate.hidden.rec_poster_img{:alt => "Mad Max 2: The Road Warrior", :height => "113", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTcxMDUyODY1OF5BMl5BanBnXkFtZTYwOTQzNDk4._V1_SX76_CR0,0,76,113_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/film-293970583._V394978416_.png", :title => "Mad Max 2: The Road Warrior", :width => "76"}/
-                                %br/
-                            .rec_item{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt1104001"}
-                              .rec_overlay
-                                .rec_filter
-                                .glyph.rec_watchlist_glyph
-                                .glyph.rec_blocked_glyph
-                                .glyph.rec_rating_glyph
-                                .glyph.rec_pending_glyph
-                              %a{:href => "/title/tt1104001/?ref_=tt_rec_tti"}
-                                %img.loadlate.hidden.rec_poster_img{:alt => "TRON: Legacy", :height => "113", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTk4NTk4MTk1OF5BMl5BanBnXkFtZTcwNTE2MDIwNA@@._V1_SY113_CR0,0,76,113_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/film-293970583._V394978416_.png", :title => "TRON: Legacy", :width => "76"}/
-                                %br/
-                            .rec_item{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0119567"}
-                              .rec_overlay
-                                .rec_filter
-                                .glyph.rec_watchlist_glyph
-                                .glyph.rec_blocked_glyph
-                                .glyph.rec_rating_glyph
-                                .glyph.rec_pending_glyph
-                              %a{:href => "/title/tt0119567/?ref_=tt_rec_tti"}
-                                %img.loadlate.hidden.rec_poster_img{:alt => "The Lost World: Jurassic Park", :height => "113", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTYxNjY1NjE2OV5BMl5BanBnXkFtZTYwNzE0MDc4._V1_SX76_CR0,0,76,113_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/film-293970583._V394978416_.png", :title => "The Lost World: Jurassic Park", :width => "76"}/
-                                %br/
-                            .rec_item{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0062512"}
-                              .rec_overlay
-                                .rec_filter
-                                .glyph.rec_watchlist_glyph
-                                .glyph.rec_blocked_glyph
-                                .glyph.rec_rating_glyph
-                                .glyph.rec_pending_glyph
-                              %a{:href => "/title/tt0062512/?ref_=tt_rec_tti"}
-                                %img.loadlate.hidden.rec_poster_img{:alt => "You Only Live Twice", :height => "113", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTk4NTU2Mzk1OV5BMl5BanBnXkFtZTcwMzY5MDg0NA@@._V1_SX76_CR0,0,76,113_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/film-293970583._V394978416_.png", :title => "You Only Live Twice", :width => "76"}/
-                                %br/
-                            .rec_item{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt1386703"}
-                              .rec_overlay
-                                .rec_filter
-                                .glyph.rec_watchlist_glyph
-                                .glyph.rec_blocked_glyph
-                                .glyph.rec_rating_glyph
-                                .glyph.rec_pending_glyph
-                              %a{:href => "/title/tt1386703/?ref_=tt_rec_tti"}
-                                %img.loadlate.hidden.rec_poster_img{:alt => "Total Recall", :height => "113", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMzQ2NzYwOTEzMl5BMl5BanBnXkFtZTcwNjExNTMxOA@@._V1_SX76_CR0,0,76,113_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/film-293970583._V394978416_.png", :title => "Total Recall", :width => "76"}/
-                                %br/
-                            .rec_item{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0319262"}
-                              .rec_overlay
-                                .rec_filter
-                                .glyph.rec_watchlist_glyph
-                                .glyph.rec_blocked_glyph
-                                .glyph.rec_rating_glyph
-                                .glyph.rec_pending_glyph
-                              %a{:href => "/title/tt0319262/?ref_=tt_rec_tti"}
-                                %img.loadlate.hidden.rec_poster_img{:alt => "The Day After Tomorrow", :height => "113", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTU1NTA3NzMwOV5BMl5BanBnXkFtZTcwNzEzMTEzMw@@._V1_SX76_CR0,0,76,113_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/small/film-293970583._V394978416_.png", :title => "The Day After Tomorrow", :width => "76"}/
-                                %br/
-                        .rec_nav
-                          .rec_nav_page_num
-                          %a.rec_nav_left ◄ Prev 6
-                          %a.rec_nav_right Next 6 ►
-                    .rec_overviews
-                      .rec_overview{"data-tconst" => "tt0093773"}
-                        .rec_poster{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0093773"}
-                          .rec_overlay
-                            .rec_filter
-                            .glyph.rec_watchlist_glyph
-                            .glyph.rec_blocked_glyph
-                            .glyph.rec_rating_glyph
-                            .glyph.rec_pending_glyph
-                          %a{:href => "/title/tt0093773/?ref_=tt_rec_tti"}
-                            %img.loadlate.hidden.rec_poster_img{:alt => "Predator", :height => "190", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTM1Njk0MjIwN15BMl5BanBnXkFtZTcwNzgwNzEyMQ@@._V1_SY190_CR2,0,128,190_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/large/film-184890147._V394978381_.png", :title => "Predator", :width => "128"}/
-                            %br/
-                        .rec_actions
-                          .rec_action_divider
-                            .wlb_classic_wrapper
-                              %span.wlb_wrapper
-                                %a.rec_wlb_watchlist_btn{"data-caller-name" => "p13nsims-title", "data-size" => "medium", "data-tconst" => "tt0093773", "data-type" => "primary"}
-                          .rec_action_divider
-                            %span.btn2_wrapper
-                              %a.rec_next.rec_half_button.btn2.medium.btn2_text_on{:onclick => "", :title => "Show me the next title"}
-                                %span.btn2_glyph 0
-                                %span.btn2_text Next »
-                          %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
-                        .rec_details
-                          .rec-info
-                            .rec-jaw-upper
-                              .rec-title
-                                %a{:href => "/title/tt0093773/?ref_=tt_rec_tt"}
-                                  %b Predator
-                                %span.nobr (1987)
-                              .rec-cert-genre.rec-elipsis
-                                %span.us_r.titlePageSprite.absmiddle{:title => "Ratings certificate for Predator (1987)"}
-                                Action
-                                %span.ghost |
-                                Adventure
-                                %span.ghost |
-                                Sci-Fi
-                              .rec-rating
-                                .rating.rating-list{"data-auth" => "", "data-ga-identifier" => "", "data-starbar-class" => "rating-list", "data-user" => "", :id => "tt0093773|imdb|7.8|7.8|p13nsims-title", :title => "Users rated this 7.8/10 (192,473 votes) - click stars to rate"}
-                                  %span.rating-bg  
-                                  %span.rating-imdb{:style => "width: 109.2px"}  
-                                  %span.rating-stars
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 1
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 2
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 3
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 4
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 5
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 6
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 7
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 8
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 9
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 10
-                                  %span.rating-rating
-                                    %span.value 7.8
-                                    %span.grey /
-                                    %span.grey 10
-                                  %span.rating-cancel
-                                    %a{:href => "/title/tt0093773/vote?v=X;k=", :rel => "nofollow", :title => "Delete"}
-                                      %span X
-                                  \ 
-                                .rec-outline
-                                  %p
-                                    A team of commandos, on a mission in a Central American jungle, find themselves hunted by an extra-terrestrial warrior.
-                            .rec-jaw-lower
-                              .rec-jaw-teeth
-                              .rec-director.rec-ellipsis
-                                %b Director:
-                                John McTiernan
-                              .rec-actor.rec-ellipsis
-                                %span
-                                  %b Stars:
-                                  Arnold Schwarzenegger,
-                                  Carl Weathers,
-                                  Elpidia Carrillo
-                      .rec_overview{"data-tconst" => "tt0116629"}
-                        .rec_poster{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0116629"}
-                          .rec_overlay
-                            .rec_filter
-                            .glyph.rec_watchlist_glyph
-                            .glyph.rec_blocked_glyph
-                            .glyph.rec_rating_glyph
-                            .glyph.rec_pending_glyph
-                          %a{:href => "/title/tt0116629/?ref_=tt_rec_tti"}
-                            %img.loadlate.hidden.rec_poster_img{:alt => "Independence Day", :height => "190", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTMwODY3NzQzNF5BMl5BanBnXkFtZTcwNzUxNjc0MQ@@._V1_SY190_CR3,0,128,190_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/large/film-184890147._V394978381_.png", :title => "Independence Day", :width => "128"}/
-                            %br/
-                        .rec_actions
-                          .rec_action_divider
-                            .wlb_classic_wrapper
-                              %span.wlb_wrapper
-                                %a.rec_wlb_watchlist_btn{"data-caller-name" => "p13nsims-title", "data-size" => "medium", "data-tconst" => "tt0116629", "data-type" => "primary"}
-                          .rec_action_divider
-                            %span.btn2_wrapper
-                              %a.rec_next.rec_half_button.btn2.medium.btn2_text_on{:onclick => "", :title => "Show me the next title"}
-                                %span.btn2_glyph 0
-                                %span.btn2_text Next »
-                          %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
-                        .rec_details
-                          .rec-info
-                            .rec-jaw-upper
-                              .rec-title
-                                %a{:href => "/title/tt0116629/?ref_=tt_rec_tt"}
-                                  %b Independence Day
-                                %span.nobr (1996)
-                              .rec-cert-genre.rec-elipsis
-                                %span.us_pg_13.titlePageSprite.absmiddle{:title => "Ratings certificate for Independence Day (1996)"}
-                                Action
-                                %span.ghost |
-                                Adventure
-                                %span.ghost |
-                                Sci-Fi
-                              .rec-rating
-                                .rating.rating-list{"data-auth" => "", "data-ga-identifier" => "", "data-starbar-class" => "rating-list", "data-user" => "", :id => "tt0116629|imdb|6.8|6.8|p13nsims-title", :title => "Users rated this 6.8/10 (285,882 votes) - click stars to rate"}
-                                  %span.rating-bg  
-                                  %span.rating-imdb{:style => "width: 95.2px"}  
-                                  %span.rating-stars
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 1
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 2
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 3
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 4
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 5
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 6
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 7
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 8
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 9
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 10
-                                  %span.rating-rating
-                                    %span.value 6.8
-                                    %span.grey /
-                                    %span.grey 10
-                                  %span.rating-cancel
-                                    %a{:href => "/title/tt0116629/vote?v=X;k=", :rel => "nofollow", :title => "Delete"}
-                                      %span X
-                                  \ 
-                                .rec-outline
-                                  %p
-                                    The aliens are coming and their goal is to invade and destroy. Fighting superior technology, Man's best weapon is the will to survive.
-                            .rec-jaw-lower
-                              .rec-jaw-teeth
-                              .rec-director.rec-ellipsis
-                                %b Director:
-                                Roland Emmerich
-                              .rec-actor.rec-ellipsis
-                                %span
-                                  %b Stars:
-                                  Will Smith,
-                                  Bill Pullman,
-                                  Jeff Goldblum
-                      .rec_overview{"data-tconst" => "tt0084726"}
-                        .rec_poster{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0084726"}
-                          .rec_overlay
-                            .rec_filter
-                            .glyph.rec_watchlist_glyph
-                            .glyph.rec_blocked_glyph
-                            .glyph.rec_rating_glyph
-                            .glyph.rec_pending_glyph
-                          %a{:href => "/title/tt0084726/?ref_=tt_rec_tti"}
-                            %img.loadlate.hidden.rec_poster_img{:alt => "Star Trek II: The Wrath of Khan", :height => "190", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTcwNjc5NjA4N15BMl5BanBnXkFtZTcwNDk5MzI4OA@@._V1_SX128_CR0,0,128,190_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/large/film-184890147._V394978381_.png", :title => "Star Trek II: The Wrath of Khan", :width => "128"}/
-                            %br/
-                        .rec_actions
-                          .rec_action_divider
-                            .wlb_classic_wrapper
-                              %span.wlb_wrapper
-                                %a.rec_wlb_watchlist_btn{"data-caller-name" => "p13nsims-title", "data-size" => "medium", "data-tconst" => "tt0084726", "data-type" => "primary"}
-                          .rec_action_divider
-                            %span.btn2_wrapper
-                              %a.rec_next.rec_half_button.btn2.medium.btn2_text_on{:onclick => "", :title => "Show me the next title"}
-                                %span.btn2_glyph 0
-                                %span.btn2_text Next »
-                          %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
-                        .rec_details
-                          .rec-info
-                            .rec-jaw-upper
-                              .rec-title
-                                %a{:href => "/title/tt0084726/?ref_=tt_rec_tt"}
-                                  %b Star Trek II: The Wrath of Khan
-                                %span.nobr (1982)
-                              .rec-cert-genre.rec-elipsis
-                                %span.us_pg.titlePageSprite.absmiddle{:title => "Ratings certificate for Star Trek II: The Wrath of Khan (1982)"}
-                                Action
-                                %span.ghost |
-                                Adventure
-                                %span.ghost |
-                                Sci-Fi
-                              .rec-rating
-                                .rating.rating-list{"data-auth" => "", "data-ga-identifier" => "", "data-starbar-class" => "rating-list", "data-user" => "", :id => "tt0084726|imdb|7.7|7.7|p13nsims-title", :title => "Users rated this 7.7/10 (64,9.4 votes) - click stars to rate"}
-                                  %span.rating-bg  
-                                  %span.rating-imdb{:style => "width: 107.8px"}  
-                                  %span.rating-stars
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 1
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 2
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 3
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 4
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 5
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 6
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 7
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 8
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 9
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 10
-                                  %span.rating-rating
-                                    %span.value 7.7
-                                    %span.grey /
-                                    %span.grey 10
-                                  %span.rating-cancel
-                                    %a{:href => "/title/tt0084726/vote?v=X;k=", :rel => "nofollow", :title => "Delete"}
-                                      %span X
-                                  \ 
-                                .rec-outline
-                                  %p
-                                    With the aid of the Enterprise crew, Admiral Kirk must stop an old nemesis, Khan Noonien Singh, from using his son's life-generating device, the Genesis Device, as the ultimate weapon.
-                            .rec-jaw-lower
-                              .rec-jaw-teeth
-                              .rec-director.rec-ellipsis
-                                %b Director:
-                                Nicholas Meyer
-                              .rec-actor.rec-ellipsis
-                                %span
-                                  %b Stars:
-                                  William Shatner,
-                                  Leonard Nimoy,
-                                  DeForest Kelley
-                      .rec_overview{"data-tconst" => "tt0379786"}
-                        .rec_poster{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0379786"}
-                          .rec_overlay
-                            .rec_filter
-                            .glyph.rec_watchlist_glyph
-                            .glyph.rec_blocked_glyph
-                            .glyph.rec_rating_glyph
-                            .glyph.rec_pending_glyph
-                          %a{:href => "/title/tt0379786/?ref_=tt_rec_tti"}
-                            %img.loadlate.hidden.rec_poster_img{:alt => "Serenity", :height => "190", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTI0NTY1MzY4NV5BMl5BanBnXkFtZTcwNTczODAzMQ@@._V1_SY190_CR0,0,128,190_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/large/film-184890147._V394978381_.png", :title => "Serenity", :width => "128"}/
-                            %br/
-                        .rec_actions
-                          .rec_action_divider
-                            .wlb_classic_wrapper
-                              %span.wlb_wrapper
-                                %a.rec_wlb_watchlist_btn{"data-caller-name" => "p13nsims-title", "data-size" => "medium", "data-tconst" => "tt0379786", "data-type" => "primary"}
-                          .rec_action_divider
-                            %span.btn2_wrapper
-                              %a.rec_next.rec_half_button.btn2.medium.btn2_text_on{:onclick => "", :title => "Show me the next title"}
-                                %span.btn2_glyph 0
-                                %span.btn2_text Next »
-                          %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
-                        .rec_details
-                          .rec-info
-                            .rec-jaw-upper
-                              .rec-title
-                                %a{:href => "/title/tt0379786/?ref_=tt_rec_tt"}
-                                  %b Serenity
-                                %span.nobr (2005)
-                              .rec-cert-genre.rec-elipsis
-                                %span.us_pg_13.titlePageSprite.absmiddle{:title => "Ratings certificate for Serenity (2005)"}
-                                Action
-                                %span.ghost |
-                                Adventure
-                                %span.ghost |
-                                Sci-Fi
-                              .rec-rating
-                                .rating.rating-list{"data-auth" => "", "data-ga-identifier" => "", "data-starbar-class" => "rating-list", "data-user" => "", :id => "tt0379786|imdb|9.4|9.4|p13nsims-title", :title => "Users rated this 9.4/10 (176,771 votes) - click stars to rate"}
-                                  %span.rating-bg  
-                                  %span.rating-imdb{:style => "width: 110.6px"}  
-                                  %span.rating-stars
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 1
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 2
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 3
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 4
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 5
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 6
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 7
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 8
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 9
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 10
-                                  %span.rating-rating
-                                    %span.value 9.4
-                                    %span.grey /
-                                    %span.grey 10
-                                  %span.rating-cancel
-                                    %a{:href => "/title/tt0379786/vote?v=X;k=", :rel => "nofollow", :title => "Delete"}
-                                      %span X
-                                  \ 
-                                .rec-outline
-                                  %p
-                                    The crew of the ship Serenity tries to evade an assassin sent to recapture one of their number who is telepathic.
-                            .rec-jaw-lower
-                              .rec-jaw-teeth
-                              .rec-director.rec-ellipsis
-                                %b Director:
-                                Joss Whedon
-                              .rec-actor.rec-ellipsis
-                                %span
-                                  %b Stars:
-                                  Nathan Fillion,
-                                  Gina Torres,
-                                  Alan Tudyk
-                      .rec_overview{"data-tconst" => "tt0117731"}
-                        .rec_poster{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0117731"}
-                          .rec_overlay
-                            .rec_filter
-                            .glyph.rec_watchlist_glyph
-                            .glyph.rec_blocked_glyph
-                            .glyph.rec_rating_glyph
-                            .glyph.rec_pending_glyph
-                          %a{:href => "/title/tt0117731/?ref_=tt_rec_tti"}
-                            %img.loadlate.hidden.rec_poster_img{:alt => "Star Trek: First Contact", :height => "190", :loadlate => "http://ia.media-imdb.com/images/M/MV5BNTc1NjMzODU1MF5BMl5BanBnXkFtZTYwMjAwNjk4._V1_SY190_CR3,0,128,190_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/large/film-184890147._V394978381_.png", :title => "Star Trek: First Contact", :width => "128"}/
-                            %br/
-                        .rec_actions
-                          .rec_action_divider
-                            .wlb_classic_wrapper
-                              %span.wlb_wrapper
-                                %a.rec_wlb_watchlist_btn{"data-caller-name" => "p13nsims-title", "data-size" => "medium", "data-tconst" => "tt0117731", "data-type" => "primary"}
-                          .rec_action_divider
-                            %span.btn2_wrapper
-                              %a.rec_next.rec_half_button.btn2.medium.btn2_text_on{:onclick => "", :title => "Show me the next title"}
-                                %span.btn2_glyph 0
-                                %span.btn2_text Next »
-                          %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
-                        .rec_details
-                          .rec-info
-                            .rec-jaw-upper
-                              .rec-title
-                                %a{:href => "/title/tt0117731/?ref_=tt_rec_tt"}
-                                  %b Star Trek: First Contact
-                                %span.nobr (1996)
-                              .rec-cert-genre.rec-elipsis
-                                %span.us_pg_13.titlePageSprite.absmiddle{:title => "Ratings certificate for Star Trek: First Contact (1996)"}
-                                Action
-                                %span.ghost |
-                                Adventure
-                                %span.ghost |
-                                Sci-Fi
-                              .rec-rating
-                                .rating.rating-list{"data-auth" => "", "data-ga-identifier" => "", "data-starbar-class" => "rating-list", "data-user" => "", :id => "tt0117731|imdb|7.5|7.5|p13nsims-title", :title => "Users rated this 7.5/10 (73,604 votes) - click stars to rate"}
-                                  %span.rating-bg  
-                                  %span.rating-imdb{:style => "width: 105px"}  
-                                  %span.rating-stars
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 1
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 2
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 3
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 4
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 5
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 6
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 7
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 8
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 9
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 10
-                                  %span.rating-rating
-                                    %span.value 7.5
-                                    %span.grey /
-                                    %span.grey 10
-                                  %span.rating-cancel
-                                    %a{:href => "/title/tt0117731/vote?v=X;k=", :rel => "nofollow", :title => "Delete"}
-                                      %span X
-                                  \ 
-                                .rec-outline
-                                  %p
-                                    Captain Picard and his crew pursue the Borg back in time to stop them from preventing Earth from initiating first contact with alien life.
-                            .rec-jaw-lower
-                              .rec-jaw-teeth
-                              .rec-director.rec-ellipsis
-                                %b Director:
-                                Jonathan Frakes
-                              .rec-actor.rec-ellipsis
-                                %span
-                                  %b Stars:
-                                  Patrick Stewart,
-                                  Jonathan Frakes,
-                                  Brent Spiner
-                      .rec_overview{"data-tconst" => "tt0100802"}
-                        .rec_poster{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0100802"}
-                          .rec_overlay
-                            .rec_filter
-                            .glyph.rec_watchlist_glyph
-                            .glyph.rec_blocked_glyph
-                            .glyph.rec_rating_glyph
-                            .glyph.rec_pending_glyph
-                          %a{:href => "/title/tt0100802/?ref_=tt_rec_tti"}
-                            %img.loadlate.hidden.rec_poster_img{:alt => "Total Recall", :height => "190", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTc2MTU4ODI5MF5BMl5BanBnXkFtZTcwODI2MzAyOA@@._V1_SY190_CR4,0,128,190_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/large/film-184890147._V394978381_.png", :title => "Total Recall", :width => "128"}/
-                            %br/
-                        .rec_actions
-                          .rec_action_divider
-                            .wlb_classic_wrapper
-                              %span.wlb_wrapper
-                                %a.rec_wlb_watchlist_btn{"data-caller-name" => "p13nsims-title", "data-size" => "medium", "data-tconst" => "tt0100802", "data-type" => "primary"}
-                          .rec_action_divider
-                            %span.btn2_wrapper
-                              %a.rec_next.rec_half_button.btn2.medium.btn2_text_on{:onclick => "", :title => "Show me the next title"}
-                                %span.btn2_glyph 0
-                                %span.btn2_text Next »
-                          %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
-                        .rec_details
-                          .rec-info
-                            .rec-jaw-upper
-                              .rec-title
-                                %a{:href => "/title/tt0100802/?ref_=tt_rec_tt"}
-                                  %b Total Recall
-                                %span.nobr (1990)
-                              .rec-cert-genre.rec-elipsis
-                                %span.us_r.titlePageSprite.absmiddle{:title => "Ratings certificate for Total Recall (1990)"}
-                                Action
-                                %span.ghost |
-                                Adventure
-                                %span.ghost |
-                                Sci-Fi
-                              .rec-rating
-                                .rating.rating-list{"data-auth" => "", "data-ga-identifier" => "", "data-starbar-class" => "rating-list", "data-user" => "", :id => "tt0100802|imdb|7.5|7.5|p13nsims-title", :title => "Users rated this 7.5/10 (161,642 votes) - click stars to rate"}
-                                  %span.rating-bg  
-                                  %span.rating-imdb{:style => "width: 105px"}  
-                                  %span.rating-stars
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 1
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 2
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 3
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 4
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 5
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 6
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 7
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 8
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 9
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 10
-                                  %span.rating-rating
-                                    %span.value 7.5
-                                    %span.grey /
-                                    %span.grey 10
-                                  %span.rating-cancel
-                                    %a{:href => "/title/tt0100802/vote?v=X;k=", :rel => "nofollow", :title => "Delete"}
-                                      %span X
-                                  \ 
-                                .rec-outline
-                                  %p
-                                    When a man goes for virtual vacation memories of the planet Mars, an unexpected and harrowing series of events forces him to go to the planet for real, or does he?
-                            .rec-jaw-lower
-                              .rec-jaw-teeth
-                              .rec-director.rec-ellipsis
-                                %b Director:
-                                Paul Verhoeven
-                              .rec-actor.rec-ellipsis
-                                %span
-                                  %b Stars:
-                                  Arnold Schwarzenegger,
-                                  Rachel Ticotin,
-                                  Sharon Stone
-                      .rec_overview{"data-tconst" => "tt0082694"}
-                        .rec_poster{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0082694"}
-                          .rec_overlay
-                            .rec_filter
-                            .glyph.rec_watchlist_glyph
-                            .glyph.rec_blocked_glyph
-                            .glyph.rec_rating_glyph
-                            .glyph.rec_pending_glyph
-                          %a{:href => "/title/tt0082694/?ref_=tt_rec_tti"}
-                            %img.loadlate.hidden.rec_poster_img{:alt => "Mad Max 2: The Road Warrior", :height => "190", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTcxMDUyODY1OF5BMl5BanBnXkFtZTYwOTQzNDk4._V1_SX128_CR0,0,128,190_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/large/film-184890147._V394978381_.png", :title => "Mad Max 2: The Road Warrior", :width => "128"}/
-                            %br/
-                        .rec_actions
-                          .rec_action_divider
-                            .wlb_classic_wrapper
-                              %span.wlb_wrapper
-                                %a.rec_wlb_watchlist_btn{"data-caller-name" => "p13nsims-title", "data-size" => "medium", "data-tconst" => "tt0082694", "data-type" => "primary"}
-                          .rec_action_divider
-                            %span.btn2_wrapper
-                              %a.rec_next.rec_half_button.btn2.medium.btn2_text_on{:onclick => "", :title => "Show me the next title"}
-                                %span.btn2_glyph 0
-                                %span.btn2_text Next »
-                          %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
-                        .rec_details
-                          .rec-info
-                            .rec-jaw-upper
-                              .rec-title
-                                %a{:href => "/title/tt0082694/?ref_=tt_rec_tt"}
-                                  %b Mad Max 2: The Road Warrior
-                                %span.nobr (1981)
-                              .rec-cert-genre.rec-elipsis
-                                %span.us_r.titlePageSprite.absmiddle{:title => "Ratings certificate for Mad Max 2: The Road Warrior (1981)"}
-                                Action
-                                %span.ghost |
-                                Adventure
-                                %span.ghost |
-                                Thriller
-                              .rec-rating
-                                .rating.rating-list{"data-auth" => "", "data-ga-identifier" => "", "data-starbar-class" => "rating-list", "data-user" => "", :id => "tt0082694|imdb|7.6|7.6|p13nsims-title", :title => "Users rated this 7.6/10 (74,9.4 votes) - click stars to rate"}
-                                  %span.rating-bg  
-                                  %span.rating-imdb{:style => "width: 106.4px"}  
-                                  %span.rating-stars
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 1
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 2
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 3
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 4
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 5
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 6
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 7
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 8
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 9
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 10
-                                  %span.rating-rating
-                                    %span.value 7.6
-                                    %span.grey /
-                                    %span.grey 10
-                                  %span.rating-cancel
-                                    %a{:href => "/title/tt0082694/vote?v=X;k=", :rel => "nofollow", :title => "Delete"}
-                                      %span X
-                                  \ 
-                                .rec-outline
-                                  %p
-                                    In the post-apocalyptic Australian wasteland, a cynical drifter agrees to help a small, gasoline rich, community escape a band of bandits.
-                            .rec-jaw-lower
-                              .rec-jaw-teeth
-                              .rec-director.rec-ellipsis
-                                %b Director:
-                                George Miller
-                              .rec-actor.rec-ellipsis
-                                %span
-                                  %b Stars:
-                                  Mel Gibson,
-                                  Bruce Spence,
-                                  Michael Preston
-                      .rec_overview{"data-tconst" => "tt1104001"}
-                        .rec_poster{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt1104001"}
-                          .rec_overlay
-                            .rec_filter
-                            .glyph.rec_watchlist_glyph
-                            .glyph.rec_blocked_glyph
-                            .glyph.rec_rating_glyph
-                            .glyph.rec_pending_glyph
-                          %a{:href => "/title/tt1104001/?ref_=tt_rec_tti"}
-                            %img.loadlate.hidden.rec_poster_img{:alt => "TRON: Legacy", :height => "190", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTk4NTk4MTk1OF5BMl5BanBnXkFtZTcwNTE2MDIwNA@@._V1_SY190_CR0,0,128,190_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/large/film-184890147._V394978381_.png", :title => "TRON: Legacy", :width => "128"}/
-                            %br/
-                        .rec_actions
-                          .rec_action_divider
-                            .wlb_classic_wrapper
-                              %span.wlb_wrapper
-                                %a.rec_wlb_watchlist_btn{"data-caller-name" => "p13nsims-title", "data-size" => "medium", "data-tconst" => "tt1104001", "data-type" => "primary"}
-                          .rec_action_divider
-                            %span.btn2_wrapper
-                              %a.rec_next.rec_half_button.btn2.medium.btn2_text_on{:onclick => "", :title => "Show me the next title"}
-                                %span.btn2_glyph 0
-                                %span.btn2_text Next »
-                          %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
-                        .rec_details
-                          .rec-info
-                            .rec-jaw-upper
-                              .rec-title
-                                %a{:href => "/title/tt1104001/?ref_=tt_rec_tt"}
-                                  %b TRON: Legacy
-                                %span.nobr (2010)
-                              .rec-cert-genre.rec-elipsis
-                                %span.us_pg.titlePageSprite.absmiddle{:title => "Ratings certificate for TRON: Legacy (2010)"}
-                                Action
-                                %span.ghost |
-                                Adventure
-                                %span.ghost |
-                                Sci-Fi
-                              .rec-rating
-                                .rating.rating-list{"data-auth" => "", "data-ga-identifier" => "", "data-starbar-class" => "rating-list", "data-user" => "", :id => "tt1104001|imdb|6.8|6.8|p13nsims-title", :title => "Users rated this 6.8/10 (184,102 votes) - click stars to rate"}
-                                  %span.rating-bg  
-                                  %span.rating-imdb{:style => "width: 95.2px"}  
-                                  %span.rating-stars
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 1
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 2
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 3
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 4
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 5
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 6
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 7
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 8
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 9
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 10
-                                  %span.rating-rating
-                                    %span.value 6.8
-                                    %span.grey /
-                                    %span.grey 10
-                                  %span.rating-cancel
-                                    %a{:href => "/title/tt1104001/vote?v=X;k=", :rel => "nofollow", :title => "Delete"}
-                                      %span X
-                                  \ 
-                                .rec-outline
-                                  %p
-                                    The son of a virtual world designer goes looking for his father and ends up inside the digital world that his father designed. He meets his father's creation turned bad and a unique ally who was born inside the digital domain of The Grid.
-                            .rec-jaw-lower
-                              .rec-jaw-teeth
-                              .rec-director.rec-ellipsis
-                                %b Director:
-                                Joseph Kosinski
-                              .rec-actor.rec-ellipsis
-                                %span
-                                  %b Stars:
-                                  Jeff Bridges,
-                                  Garrett Hedlund,
-                                  Olivia Wilde
-                      .rec_overview{"data-tconst" => "tt0119567"}
-                        .rec_poster{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0119567"}
-                          .rec_overlay
-                            .rec_filter
-                            .glyph.rec_watchlist_glyph
-                            .glyph.rec_blocked_glyph
-                            .glyph.rec_rating_glyph
-                            .glyph.rec_pending_glyph
-                          %a{:href => "/title/tt0119567/?ref_=tt_rec_tti"}
-                            %img.loadlate.hidden.rec_poster_img{:alt => "The Lost World: Jurassic Park", :height => "190", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTYxNjY1NjE2OV5BMl5BanBnXkFtZTYwNzE0MDc4._V1_SX128_CR0,0,128,190_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/large/film-184890147._V394978381_.png", :title => "The Lost World: Jurassic Park", :width => "128"}/
-                            %br/
-                        .rec_actions
-                          .rec_action_divider
-                            .wlb_classic_wrapper
-                              %span.wlb_wrapper
-                                %a.rec_wlb_watchlist_btn{"data-caller-name" => "p13nsims-title", "data-size" => "medium", "data-tconst" => "tt0119567", "data-type" => "primary"}
-                          .rec_action_divider
-                            %span.btn2_wrapper
-                              %a.rec_next.rec_half_button.btn2.medium.btn2_text_on{:onclick => "", :title => "Show me the next title"}
-                                %span.btn2_glyph 0
-                                %span.btn2_text Next »
-                          %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
-                        .rec_details
-                          .rec-info
-                            .rec-jaw-upper
-                              .rec-title
-                                %a{:href => "/title/tt0119567/?ref_=tt_rec_tt"}
-                                  %b The Lost World: Jurassic Park
-                                %span.nobr (1997)
-                              .rec-cert-genre.rec-elipsis
-                                %span.us_pg_13.titlePageSprite.absmiddle{:title => "Ratings certificate for The Lost World: Jurassic Park (1997)"}
-                                Action
-                                %span.ghost |
-                                Adventure
-                                %span.ghost |
-                                Sci-Fi
-                              .rec-rating
-                                .rating.rating-list{"data-auth" => "", "data-ga-identifier" => "", "data-starbar-class" => "rating-list", "data-user" => "", :id => "tt0119567|imdb|6.4|6.4|p13nsims-title", :title => "Users rated this 6.4/10 (163,317 votes) - click stars to rate"}
-                                  %span.rating-bg  
-                                  %span.rating-imdb{:style => "width: 89.6px"}  
-                                  %span.rating-stars
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 1
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 2
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 3
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 4
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 5
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 6
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 7
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 8
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 9
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 10
-                                  %span.rating-rating
-                                    %span.value 6.4
-                                    %span.grey /
-                                    %span.grey 10
-                                  %span.rating-cancel
-                                    %a{:href => "/title/tt0119567/vote?v=X;k=", :rel => "nofollow", :title => "Delete"}
-                                      %span X
-                                  \ 
-                                .rec-outline
-                                  %p
-                                    A research team is sent to the Jurassic Park Site B island to study the dinosaurs there while another team approaches with another agenda.
-                            .rec-jaw-lower
-                              .rec-jaw-teeth
-                              .rec-director.rec-ellipsis
-                                %b Director:
-                                Steven Spielberg
-                              .rec-actor.rec-ellipsis
-                                %span
-                                  %b Stars:
-                                  Jeff Goldblum,
-                                  Julianne Moore,
-                                  Pete Postlethwaite
-                      .rec_overview{"data-tconst" => "tt0062512"}
-                        .rec_poster{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0062512"}
-                          .rec_overlay
-                            .rec_filter
-                            .glyph.rec_watchlist_glyph
-                            .glyph.rec_blocked_glyph
-                            .glyph.rec_rating_glyph
-                            .glyph.rec_pending_glyph
-                          %a{:href => "/title/tt0062512/?ref_=tt_rec_tti"}
-                            %img.loadlate.hidden.rec_poster_img{:alt => "You Only Live Twice", :height => "190", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTk4NTU2Mzk1OV5BMl5BanBnXkFtZTcwMzY5MDg0NA@@._V1_SX128_CR0,0,128,190_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/large/film-184890147._V394978381_.png", :title => "You Only Live Twice", :width => "128"}/
-                            %br/
-                        .rec_actions
-                          .rec_action_divider
-                            .wlb_classic_wrapper
-                              %span.wlb_wrapper
-                                %a.rec_wlb_watchlist_btn{"data-caller-name" => "p13nsims-title", "data-size" => "medium", "data-tconst" => "tt0062512", "data-type" => "primary"}
-                          .rec_action_divider
-                            %span.btn2_wrapper
-                              %a.rec_next.rec_half_button.btn2.medium.btn2_text_on{:onclick => "", :title => "Show me the next title"}
-                                %span.btn2_glyph 0
-                                %span.btn2_text Next »
-                          %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
-                        .rec_details
-                          .rec-info
-                            .rec-jaw-upper
-                              .rec-title
-                                %a{:href => "/title/tt0062512/?ref_=tt_rec_tt"}
-                                  %b You Only Live Twice
-                                %span.nobr (1967)
-                              .rec-cert-genre.rec-elipsis
-                                %span.us_approved.titlePageSprite.absmiddle{:title => "Ratings certificate for You Only Live Twice (1967)"}
-                                Action
-                                %span.ghost |
-                                Adventure
-                                %span.ghost |
-                                Crime
-                              .rec-rating
-                                .rating.rating-list{"data-auth" => "", "data-ga-identifier" => "", "data-starbar-class" => "rating-list", "data-user" => "", :id => "tt0062512|imdb|6.9|6.9|p13nsims-title", :title => "Users rated this 6.9/10 (50,159 votes) - click stars to rate"}
-                                  %span.rating-bg  
-                                  %span.rating-imdb{:style => "width: 96.6px"}  
-                                  %span.rating-stars
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 1
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 2
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 3
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 4
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 5
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 6
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 7
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 8
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 9
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 10
-                                  %span.rating-rating
-                                    %span.value 6.9
-                                    %span.grey /
-                                    %span.grey 10
-                                  %span.rating-cancel
-                                    %a{:href => "/title/tt0062512/vote?v=X;k=", :rel => "nofollow", :title => "Delete"}
-                                      %span X
-                                  \ 
-                                .rec-outline
-                                  %p
-                                    Agent 007 and the Japanese secret service ninja force must find and stop the true culprit of a series of spacejackings before nuclear war is provoked.
-                            .rec-jaw-lower
-                              .rec-jaw-teeth
-                              .rec-director.rec-ellipsis
-                                %b Director:
-                                Lewis Gilbert
-                              .rec-actor.rec-ellipsis
-                                %span
-                                  %b Stars:
-                                  Sean Connery,
-                                  Akiko Wakabayashi,
-                                  Mie Hama
-                      .rec_overview{"data-tconst" => "tt1386703"}
-                        .rec_poster{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt1386703"}
-                          .rec_overlay
-                            .rec_filter
-                            .glyph.rec_watchlist_glyph
-                            .glyph.rec_blocked_glyph
-                            .glyph.rec_rating_glyph
-                            .glyph.rec_pending_glyph
-                          %a{:href => "/title/tt1386703/?ref_=tt_rec_tti"}
-                            %img.loadlate.hidden.rec_poster_img{:alt => "Total Recall", :height => "190", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMzQ2NzYwOTEzMl5BMl5BanBnXkFtZTcwNjExNTMxOA@@._V1_SX128_CR0,0,128,190_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/large/film-184890147._V394978381_.png", :title => "Total Recall", :width => "128"}/
-                            %br/
-                        .rec_actions
-                          .rec_action_divider
-                            .wlb_classic_wrapper
-                              %span.wlb_wrapper
-                                %a.rec_wlb_watchlist_btn{"data-caller-name" => "p13nsims-title", "data-size" => "medium", "data-tconst" => "tt1386703", "data-type" => "primary"}
-                          .rec_action_divider
-                            %span.btn2_wrapper
-                              %a.rec_next.rec_half_button.btn2.medium.btn2_text_on{:onclick => "", :title => "Show me the next title"}
-                                %span.btn2_glyph 0
-                                %span.btn2_text Next »
-                          %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
-                        .rec_details
-                          .rec-info
-                            .rec-jaw-upper
-                              .rec-title
-                                %a{:href => "/title/tt1386703/?ref_=tt_rec_tt"}
-                                  %b Total Recall
-                                %span.nobr (2012)
-                              .rec-cert-genre.rec-elipsis
-                                %span.us_pg_13.titlePageSprite.absmiddle{:title => "Ratings certificate for Total Recall (2012)"}
-                                Action
-                                %span.ghost |
-                                Adventure
-                                %span.ghost |
-                                Sci-Fi
-                              .rec-rating
-                                .rating.rating-list{"data-auth" => "", "data-ga-identifier" => "", "data-starbar-class" => "rating-list", "data-user" => "", :id => "tt1386703|imdb|6.2|6.2|p13nsims-title", :title => "Users rated this 6.2/10 (126,934 votes) - click stars to rate"}
-                                  %span.rating-bg  
-                                  %span.rating-imdb{:style => "width: 86.8px"}  
-                                  %span.rating-stars
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 1
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 2
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 3
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 4
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 5
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 6
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 7
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 8
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 9
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 10
-                                  %span.rating-rating
-                                    %span.value 6.2
-                                    %span.grey /
-                                    %span.grey 10
-                                  %span.rating-cancel
-                                    %a{:href => "/title/tt1386703/vote?v=X;k=", :rel => "nofollow", :title => "Delete"}
-                                      %span X
-                                  \ 
-                                .rec-outline
-                                  %p
-                                    A factory worker, Douglas Quaid, begins to suspect that he is a spy after visiting Rekall - a company that provides its clients with implanted fake memories of a life they would like to have led - goes wrong and he finds himself on the run.
-                            .rec-jaw-lower
-                              .rec-jaw-teeth
-                              .rec-director.rec-ellipsis
-                                %b Director:
-                                Len Wiseman
-                              .rec-actor.rec-ellipsis
-                                %span
-                                  %b Stars:
-                                  Colin Farrell,
-                                  Kate Beckinsale,
-                                  Bryan Cranston
-                      .rec_overview{"data-tconst" => "tt0319262"}
-                        .rec_poster{"data-info" => "sims:tt0371746", "data-spec" => "p13nsims:tt0371746", "data-tconst" => "tt0319262"}
-                          .rec_overlay
-                            .rec_filter
-                            .glyph.rec_watchlist_glyph
-                            .glyph.rec_blocked_glyph
-                            .glyph.rec_rating_glyph
-                            .glyph.rec_pending_glyph
-                          %a{:href => "/title/tt0319262/?ref_=tt_rec_tti"}
-                            %img.loadlate.hidden.rec_poster_img{:alt => "The Day After Tomorrow", :height => "190", :loadlate => "http://ia.media-imdb.com/images/M/MV5BMTU1NTA3NzMwOV5BMl5BanBnXkFtZTcwNzEzMTEzMw@@._V1_SX128_CR0,0,128,190_.jpg", :src => "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/large/film-184890147._V394978381_.png", :title => "The Day After Tomorrow", :width => "128"}/
-                            %br/
-                        .rec_actions
-                          .rec_action_divider
-                            .wlb_classic_wrapper
-                              %span.wlb_wrapper
-                                %a.rec_wlb_watchlist_btn{"data-caller-name" => "p13nsims-title", "data-size" => "medium", "data-tconst" => "tt0319262", "data-type" => "primary"}
-                          .rec_action_divider
-                            %span.btn2_wrapper
-                              %a.rec_next.rec_half_button.btn2.medium.btn2_text_on{:onclick => "", :title => "Show me the next title"}
-                                %span.btn2_glyph 0
-                                %span.btn2_text Next »
-                          %input{:name => "49e6c", :type => "hidden", :value => "8af8"}/
-                        .rec_details
-                          .rec-info
-                            .rec-jaw-upper
-                              .rec-title
-                                %a{:href => "/title/tt0319262/?ref_=tt_rec_tt"}
-                                  %b The Day After Tomorrow
-                                %span.nobr (2004)
-                              .rec-cert-genre.rec-elipsis
-                                %span.us_pg_13.titlePageSprite.absmiddle{:title => "Ratings certificate for The Day After Tomorrow (2004)"}
-                                Action
-                                %span.ghost |
-                                Adventure
-                                %span.ghost |
-                                Sci-Fi
-                              .rec-rating
-                                .rating.rating-list{"data-auth" => "", "data-ga-identifier" => "", "data-starbar-class" => "rating-list", "data-user" => "", :id => "tt0319262|imdb|6.3|6.3|p13nsims-title", :title => "Users rated this 6.3/10 (212,738 votes) - click stars to rate"}
-                                  %span.rating-bg  
-                                  %span.rating-imdb{:style => "width: 88.2px"}  
-                                  %span.rating-stars
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 1
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 2
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 3
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 4
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 5
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 6
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 7
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 8
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 9
-                                    %a{:href => "/register/login?why=vote&ref_=tt_ov_rt", :rel => "nofollow", :title => "Register or login to rate this title"}
-                                      %span 10
-                                  %span.rating-rating
-                                    %span.value 6.3
-                                    %span.grey /
-                                    %span.grey 10
-                                  %span.rating-cancel
-                                    %a{:href => "/title/tt0319262/vote?v=X;k=", :rel => "nofollow", :title => "Delete"}
-                                      %span X
-                                  \ 
-                                .rec-outline
-                                  %p
-                                    Jack Hall, paleoclimatologist for NORAD, must make a daring trek across America to reach his son, trapped in the cross-hairs of a sudden international storm which plunges the planet into a new Ice Age.
-                            .rec-jaw-lower
-                              .rec-jaw-teeth
-                              .rec-director.rec-ellipsis
-                                %b Director:
-                                Roland Emmerich
-                              .rec-actor.rec-ellipsis
-                                %span
-                                  %b Stars:
-                                  Dennis Quaid,
-                                  Jake Gyllenhaal,
-                                  Emmy Rossum
                 #titleCast.article
                   %span.rightcornerlink
                     %a{:href => "/register/login?why=edit&ref_=tt_cl", :rel => "login"} Edit
@@ -1888,6 +325,23 @@
                   .inline.canwrap{:itemprop => "description"}
                     %p
                       Elly and Jon invite you to join them in celebrating their wedding at the Prince Albert in Camden on the 5th July, 2014
+                  .txt-block
+                    %h4.inline Date:
+                    5th July, 2014
+                  .txt-block
+                    %h4.inline Early Birds:
+                    Arrive at 3pm for Afternoon Tea
+                  .txt-block
+                    %h4.inline Party Goers:
+                    Arrive at 6pm for Food and Drinks
+                  .txt-block
+                    %h4.inline Entertainment:
+                    %a{:href => "https://www.facebook.com/musicthebandwithnoname", :itemprop => "url"} The Band With No Name (TBC)
+                  .txt-block
+                    %h4.inline Food and Drink:
+                    There will be an open bar, and buffet food all evening. If you have any special requirements,
+                    %a{:href=>"mailto:info@ellyandjon.com"} please let us know.
+			      
                   %span.see-more.inline
                     %a{:href => "/title/tt0371746/plotsummary?ref_=tt_stry_pl"} Plot Summary
                     %span |
@@ -1895,25 +349,17 @@
                   %hr/
                   .see-more.inline.canwrap{:itemprop => "keywords"}
                     %h4.inline Plot Keywords:
-                    %a{:href => "/keyword/missile?ref_=tt_stry_kw"}
-                      %span.itemprop{:itemprop => "keywords"} missile
+                    %span fun
                     %span |
-                    %a{:href => "/keyword/armor?ref_=tt_stry_kw"}
-                      %span.itemprop{:itemprop => "keywords"} armor
+                    %span celebration
                     %span |
-                    %a{:href => "/keyword/genius?ref_=tt_stry_kw"}
-                      %span.itemprop{:itemprop => "keywords"} genius
+                    %span explosions
+                    %span |                    
+                    %span millionaire playboy
                     %span |
-                    %a{:href => "/keyword/escape?ref_=tt_stry_kw"}
-                      %span.itemprop{:itemprop => "keywords"} escape
-                    %span |
-                    %a{:href => "/keyword/playboy?ref_=tt_stry_kw"}
-                      %span.itemprop{:itemprop => "keywords"} playboy
-                    = succeed "&nbsp;" do
-                      %span |
-                    %nobr
-                      %a{:href => "/title/tt0371746/keywords?ref_=tt_stry_kw"}> See more
-                      \ »
+                    %span armor
+
+                   
                   %hr/
                   .txt-block
                     %h4.inline Taglines:
@@ -1948,208 +394,124 @@
                     %span.see-more.inline{:itemprop => "audience", :itemscope => "", :itemtype => "http://schema.org/Audience"}
                       %a{:href => "/title/tt0371746/parentalguide?ref_=tt_stry_pg", :itemprop => "url"}> View content advisory
                       \ »
-                  #titleDetails.article
-                    %span.rightcornerlink
-                      %a{:href => "/register/login?why=edit&ref_=tt_dt_dt", :rel => "login"} Edit
-                    %h2 Details
-                    .txt-block
-                      %h4.inline Official Sites:
-                      %a{:href => "https://www.facebook.com/ironman", :itemprop => "url", :rel => "nofollow"} Official Facebook
-                      %span.ghost |
-                      %a{:href => "http://www.homemdeferro.com.br/", :itemprop => "url", :rel => "nofollow"} Official site [Brazil]
-                      %span.ghost |
-                      %span.see-more.inline
-                        %a{:href => "officialsites?ref_=tt_dt_dt", :itemprop => "url"}> See more
-                        \ »
-                    .txt-block
-                      %h4.inline Country:
-                      %a{:href => "/country/us?ref_=tt_dt_dt", :itemprop => "url"} USA
-                    .txt-block
-                      %h4.inline Language:
-                      %a{:href => "/language/en?ref_=tt_dt_dt", :itemprop => "url"} English
-                      %span.ghost |
-                      %a{:href => "/language/fa?ref_=tt_dt_dt", :itemprop => "url"} Persian
-                      %span.ghost |
-                      %a{:href => "/language/ur?ref_=tt_dt_dt", :itemprop => "url"} Urdu
-                      %span.ghost |
-                      %a{:href => "/language/ar?ref_=tt_dt_dt", :itemprop => "url"} Arabic
-                    .txt-block
-                      %h4.inline Release Date:
-                      2 May 2008 (USA)
-                      %span.see-more.inline
-                        %a{:href => "releaseinfo?ref_=tt_dt_dt", :itemprop => "url"}> See more
-                        \ »
-                    .txt-block
-                      %h4.inline Filming Locations:
-                      %a{:href => "/search/title?locations=Palmdale Regional Airport, Palmdale, California, USA&ref_=tt_dt_dt", :itemprop => "url"} Palmdale   Regional   Airport, Palmdale, California, USA
-                      %span.see-more.inline
-                        %a{:href => "locations?ref_=tt_dt_dt", :itemprop => "url"}> See more
-                        \ »
-                    %hr/
-                    %h3 Box Office
-                    .txt-block
-                      %h4.inline Budget:
-                      $140,000,000
-                      %span.attribute (estimated)
-                    .txt-block
-                      %h4.inline Opening Weekend:
-                      \£5,465,103
-                      
-                      (UK)
-                      %span.attribute (2 May 2008)
-                    .txt-block
-                      %h4.inline Gross:
-                      $318,298,180
-                      %span.attribute (USA)
-                      %span.attribute (26 September 2008)
-                    %span.see-more.inline
-                      %a{:href => "business?ref_=tt_dt_bus", :itemprop => "url"}> See more
-                      \ »
-                    %hr/
-                    %h3 Company Credits
-                    .txt-block
-                      %h4.inline Production Co:
-                      = succeed "," do
-                        %span{:itemprop => "creator", :itemscope => "", :itemtype => "http://schema.org/Organization"}
-                          %a{:href => "/company/co0023400?ref_=tt_dt_co", :itemprop => "url"}
-                            %span.itemprop{:itemprop => "name"} Paramount Pictures
-                      = succeed "," do
-                        %span{:itemprop => "creator", :itemscope => "", :itemtype => "http://schema.org/Organization"}
-                          %a{:href => "/company/co0095134?ref_=tt_dt_co", :itemprop => "url"}
-                            %span.itemprop{:itemprop => "name"} Marvel Enterprises
-                      %span{:itemprop => "creator", :itemscope => "", :itemtype => "http://schema.org/Organization"}
-                        %a{:href => "/company/co0051941?ref_=tt_dt_co", :itemprop => "url"}
-                          %span.itemprop{:itemprop => "name"} Marvel Studios
-                      %span.see-more.inline
-                        %a{:href => "companycredits?ref_=tt_dt_co", :itemprop => "url"}> See more
-                        \ »
-                    .txt-block
-                      Show detailed
-                      %a{:href => "/r/tt_details_contact/title/tt0371746/companycredits", :itemprop => "url", :onclick => "(new Image()).src='/rg/  tt_details_contact/  prosystem/images/b.gif?link=/r/tt_details_contact/title/tt0371746/companycredits';"} company contact information
-                      on
-                      = succeed "&nbsp;&raquo;" do
-                        %a{:href => "/r/tt_details_contact/#", :itemprop => "url", :onclick => "(new Image()).src='/rg/tt_details_contact/prosystem/images/b.  gif?link=/  r/tt_details_contact/#';"} IMDbPro
-                    %hr/
-                    %h3 Technical Specs
-                    .txt-block
-                      %h4.inline Runtime:
-                      %time{:datetime => "PT126M", :itemprop => "duration"} 126 min
-                    .txt-block
-                      %h4.inline Sound Mix:
-                      %a{:href => "/search/title?sound_mixes=sdds&ref_=tt_dt_spec", :itemprop => "url"} SDDS
-                      %span.ghost |
-                      %a{:href => "/search/title?sound_mixes=dolby_digital&ref_=tt_dt_spec", :itemprop => "url"} Dolby Digital
-                      %span.ghost |
-                      %a{:href => "/search/title?sound_mixes=dts&ref_=tt_dt_spec", :itemprop => "url"} DTS
-                    .txt-block
-                      %h4.inline Color:
-                      %a{:href => "/search/title?colors=color&ref_=tt_dt_spec", :itemprop => "url"} Color
-                    .txt-block
-                      %h4.inline Aspect Ratio:
-                      2.35 : 1
-                    See
-                    = succeed "&nbsp;&raquo;" do
-                      %a{:href => "technical?ref_=tt_dt_spec", :itemprop => "url"} full technical specs
-                    #titleDidYouKnow.article
-                    %span.rightcornerlink
-                      %a{:href => "/register/login?why=edit&ref_=tt_trv_trv", :rel => "login"} Edit
-                    %h2 Did You Know?
-                    #trivia.txt-block
-                      %h4 Trivia
-                      400 extras were meant to be filmed standing at Tony Stark's press conference, but
-                      %a{:href => "/name/nm0000375/?ref_=tt_trv_trv"} Robert Downey Jr.
-                      suggested they ought to sit down, as that would be more realistic and comfortable.
-                      %a.nobr{:href => "trivia?ref_=tt_trv_trv"} See more
-                      \»
-                    %hr/
-                    #goofs.txt-block
-                      %h4 Goofs
-                      In the beginning sequence when Tony Stark is in Afghanistan riding in a HMMWV without armor protection with several US Air Force Airmen. An   up   armored HMMWV's doors have very thick armor and glass. You can tell by looking at the blast holes in the side of the vehicle this is not   an   armored variant of the HMMWV. This is almost impossible. Months after the US military attacked Afghanistan a General Order was made   that   prohibited non up-armored HMMWV's from leaving any base camps. Certainly, if Tony Stark was traveling with the US military he would   have been   afforded the highest level of security.
-                      %a.nobr{:href => "trivia?tab=gf&ref_=tt_trv_gf"} See more
-                      \»
-                    %hr/
-                    #quotes.text-block
-                      %h4 Quotes
-                      [
-                      %span.fine> first lines
-                      ]
-                      %br/
-                      = succeed ":" do
-                        %a{:href => "/name/nm0000375/?ref_=tt_trv_qu"}
-                          %span.character Tony Stark
-                      I feel like you're driving me to court martial. This is crazy. What did I do? I feel like you're gonna pull over and snuff me. What, you're   not   allowed to talk? Hey, Forrest!
-                      %br/
-                      = succeed ":" do
-                        %a{:href => "/name/nm1080555/?ref_=tt_trv_qu"}
-                          %span.character Jimmy
-                      We can talk, sir.
-                      %br/
-                      = succeed ":" do
-                        %a{:href => "/name/nm0000375/?ref_=tt_trv_qu"}
-                          %span.character Tony Stark
-                      Oh, I see. So it's personal.
-                      %br/
-                      = succeed ":" do
-                        %a{:href => "/name/nm0918814/?ref_=tt_trv_qu"}
-                          %span.character Ramirez
-                      No, you intimidate them.
-                      %br/
-                      = succeed ":" do
-                        %a{:href => "/name/nm0000375/?ref_=tt_trv_qu"}
-                          %span.character Tony Stark
-                      Good God, you're a woman! I honestly, I couldn't have called that. I mean, I would apologize, but isn't that what we're going for here? I     thought of you as a soldier first.
-                      %br/
-                      = succeed ":" do
-                        %a{:href => "/name/nm0918814/?ref_=tt_trv_qu"}
-                          %span.character Ramirez
-                      I'm an airman.
-                      %br/
-                      = succeed ":" do
-                        %a{:href => "/name/nm0000375/?ref_=tt_trv_qu"}
-                          %span.character Tony Stark
-                      Well, you have actually excellent bone structure ...
-                      %br/
-                      [...]
-                      %br/
-                      %a.nobr{:href => "trivia?tab=qt&ref_=tt_trv_qu"} See more
-                      \»
-                    %hr/
-                    #crazyCredits.txt-block
-                      %h4 Crazy Credits
-                      SPOILER: A scene appears after the closing credits: Tony Stark arrives home to find SHIELD director Nick Fury waiting for him so that they   can   discuss the Avengers Initiative. This leads into
-                      %a{:href => "/title/tt0848228/?ref_=tt_trv_cc"} The Avengers
-                      (a superhero team of which Iron Man is a founding member).
-                      %a.nobr{:href => "trivia?tab=cz&ref_=tt_trv_cc"} See more
-                      \»
-                    %hr/
-                    #connections.text-block
-                      %h4 Connections
-                      Referenced in
-                      = succeed "&nbsp;(2010)" do
-                        %a{:href => "/title/tt1512235/?ref_=tt_trv_cnn"} Super
-                      %a.nobr{:href => "trivia?tab=mc&ref_=tt_trv_cnn"} See more
-                      \»
-                    %hr/
-                    #soundtracks.text-block
-                      %h4 Soundtracks
-                      Back In Black
-                      %br/
-                      Written by
-                      = succeed "," do
-                        %a{:href => "/name/nm0424657/?ref_=tt_trv_snd"} Brian Johnson
-                      %a{:href => "/name/nm0949850/?ref_=tt_trv_snd"} Malcolm Young
-                      and
-                      %a{:href => "/name/nm0949264/?ref_=tt_trv_snd"} Angus Young
-                      %br/
-                      Performed by
-                      %a{:href => "/name/nm0009540/?ref_=tt_trv_snd"} AC/DC
-                      %br/
-                      Courtesy of Columbia Records
-                      %br/
-                      By Arrangement with SONY BMG Music Entertainment
-                      %br/
-                      %a.nobr{:href => "soundtrack?ref_=tt_trv_snd"} See more
-                      \»
+                #titleDetails.article
+                  %h2 Details
+                  .txt-block
+                    %h4.inline Location:
+                    %a{:href => "http://princealbertcamden.com/"} The Prince Albert, Camden
+                  .txt-block
+                    %h4.inline Address:
+                    %a{:href => "https://maps.google.co.uk/maps?q=163+ROYAL+COLLEGE+STREET+LONDON+NW1+0SG&um=1&ie=UTF-8&hl=en&sa=N&tab=wl&authuser=0"} 163 RoyaCollege Street, London, NW1 0SG
+                  .txt-block
+                    %h4.inline Transportation:
+                    Next to Camden Road station on the London Overground
+                  %hr/
+                #titleTechnicalSpecs.article
+                  %h2 Technical Specs
+                  .txt-block
+                    %h4.inline Attire:
+                    Smart Formal, but don't forget your dancing shoes!
+                  .txt-block
+                    %h4.inline Gifts:
+                    If you would like to buy us a gift, thank you! We will be providing a list soon
+
+
+                  #titleDidYouKnow.article
+                  %h2 Did You Know?
+                  #trivia.txt-block
+                    %h4 Trivia
+                    400 extras were meant to be filmed standing at Tony Stark's press conference, but
+                    %a{:href => "/name/nm0000375/?ref_=tt_trv_trv"} Robert Downey Jr.
+                    suggested they ought to sit down, as that would be more realistic and comfortable.
+                    %a.nobr{:href => "trivia?ref_=tt_trv_trv"} See more
+                    \»
+                  %hr/
+                  #goofs.txt-block
+                    %h4 Goofs
+                    In the beginning sequence when Tony Stark is in Afghanistan riding in a HMMWV without armor protection with several US Air Force AirmenAn   up   armored HMMWV's doors have very thick armor and glass. You can tell by looking at the blast holes in the side of the vehicle thiis not   an   armored variant of the HMMWV. This is almost impossible. Months after the US military attacked Afghanistan a General Order wamade   that   prohibited non up-armored HMMWV's from leaving any base camps. Certainly, if Tony Stark was traveling with the US military hwould   have been   afforded the highest level of security.
+                    %a.nobr{:href => "trivia?tab=gf&ref_=tt_trv_gf"} See more
+                    \»
+                  %hr/
+                  #quotes.text-block
+                    %h4 Quotes
+                    [
+                    %span.fine> first lines
+                    ]
+                    %br/
+                    = succeed ":" do
+                      %a{:href => "/name/nm0000375/?ref_=tt_trv_qu"}
+                        %span.character Tony Stark
+                    I feel like you're driving me to court martial. This is crazy. What did I do? I feel like you're gonna pull over and snuff me. Whatyou're   not   allowed to talk? Hey, Forrest!
+                    %br/
+                    = succeed ":" do
+                      %a{:href => "/name/nm1080555/?ref_=tt_trv_qu"}
+                        %span.character Jimmy
+                    We can talk, sir.
+                    %br/
+                    = succeed ":" do
+                      %a{:href => "/name/nm0000375/?ref_=tt_trv_qu"}
+                        %span.character Tony Stark
+                    Oh, I see. So it's personal.
+                    %br/
+                    = succeed ":" do
+                      %a{:href => "/name/nm0918814/?ref_=tt_trv_qu"}
+                        %span.character Ramirez
+                    No, you intimidate them.
+                    %br/
+                    = succeed ":" do
+                      %a{:href => "/name/nm0000375/?ref_=tt_trv_qu"}
+                        %span.character Tony Stark
+                    Good God, you're a woman! I honestly, I couldn't have called that. I mean, I would apologize, but isn't that what we're going for hereI     thought of you as a soldier first.
+                    %br/
+                    = succeed ":" do
+                      %a{:href => "/name/nm0918814/?ref_=tt_trv_qu"}
+                        %span.character Ramirez
+                    I'm an airman.
+                    %br/
+                    = succeed ":" do
+                      %a{:href => "/name/nm0000375/?ref_=tt_trv_qu"}
+                        %span.character Tony Stark
+                    Well, you have actually excellent bone structure ...
+                    %br/
+                    [...]
+                    %br/
+                    %a.nobr{:href => "trivia?tab=qt&ref_=tt_trv_qu"} See more
+                    \»
+                  %hr/
+                  #crazyCredits.txt-block
+                    %h4 Crazy Credits
+                    SPOILER: A scene appears after the closing credits: Tony Stark arrives home to find SHIELD director Nick Fury waiting for him so that they can   discuss the Avengers Initiative. This leads into
+                    %a{:href => "/title/tt0848228/?ref_=tt_trv_cc"} The Avengers
+                    (a superhero team of which Iron Man is a founding member).
+                    %a.nobr{:href => "trivia?tab=cz&ref_=tt_trv_cc"} See more
+                    \»
+                  %hr/
+                  #connections.text-block
+                    %h4 Connections
+                    Referenced in
+                    = succeed "&nbsp;(2010)" do
+                      %a{:href => "/title/tt1512235/?ref_=tt_trv_cnn"} Super
+                    %a.nobr{:href => "trivia?tab=mc&ref_=tt_trv_cnn"} See more
+                    \»
+                  %hr/
+                  #soundtracks.text-block
+                    %h4 Soundtracks
+                    %a{:href => "https://www.facebook.com/musicthebandwithnoname"} The Band With No Name
+                    %br/
+                    %br/
+                    Featuring
+                    %br/
+                    %br/
+                    Thud (Clive Taylor) - Drums
+                    %br/
+                    Machine Gun (Clive Henry) - Harmonica
+                    %br/
+                    Tin Tin (Dave Bradley) - on vocals and Rhythm Guitar
+                    %br/
+                    Westy (Phil Westerman) - Bass
+                    %br/
+                    %a.nobr{:href => "http://www.thamenews.net/readmore.asp?Content_ID=7722"} See more
+                    \»
               #content-1.redesign.clear
                 #titleFAQ.article
                   %h2 Frequently Asked Questions
@@ -2273,7 +635,7 @@
 
 :javascript
     $(document).ready( function(){
-      $("#titleCast a").fancybox({
+      $("#titleCast a, #combined-photos a").fancybox({
             'overlayShow'     :    false
         });
     });
