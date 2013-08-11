@@ -251,8 +251,7 @@
                   %hr/
                   .see-more.inline.canwrap{:itemprop => "keywords"}
                     %h4.inline Plot Keywords:
-                    fun | celebration | explosions | millionaire playboy | armor
-
+                    fun | celebration | explosions | cyborg | kittens
                   %hr/
                   .txt-block
                     %h4.inline Taglines:
@@ -308,30 +307,53 @@
                     Westy (Phil Westerman) - Bass
                     %br/
                     %a.nobr{:href => "http://www.thamenews.net/readmore.asp?Content_ID=7722"} See more
-              /       \»
-              / #content-1.redesign.clear
-              /   #titleFAQ.article
-              /     %h2 Frequently Asked Questions
-              /     %span.spoilers (Spoiler Alert!)
-              /     .faq
-              /       .odd
-              /         %b Q:
-              /         %a{:href => "#"} Should I bring my children?
-              /       .even
-              /         %b Q:
-              /         %a{:href => "#"} Will there be enough food, or should I eat beforehand?
-              /       .odd
-              /         %b Q:
-              /         %a{:href => "#"} What time should I arrive?
-              /       .even
-              /         %b Q:
-              /         %a{:href => "#"} Where can I park?
-              /       .odd
-              /         %b Q:
-              /         %a{:href => "#"} When are you actually getting married?
-              /       .even
-              /         %b Q:
-              /         %a{:href => "#"} A free bar? All night? Really?
+                    \»
+              #content-1.redesign.clear
+                #titleFAQ.article
+                  %h2 Frequently Asked Questions
+                  %span.spoilers (Spoiler Alert!)
+                  .faq
+                    .odd
+                      %b Q:
+                      %a{:href => "#children"} Are children invited?
+                      .fancy-hide 
+                        .fancy-content#children
+                          %h4 Are children invited?
+                          %p As long as they adhere to the 3 pint minimum :) 
+                          %p In all seriousness they are more than welcome
+                    .even
+                      %b Q:
+                      %a{:href => "#food"} Will there be enough food, or should I eat beforehand?
+                      .fancy-hide 
+                        .fancy-content#food 
+                          %h4 Will there be enough food, or should I eat beforehand?
+                          %p You will be well catered for, with tons of food and drink all day and all night.
+                    .odd
+                      %b Q:
+                      %a{:href => "#parking"} Where can I park?
+                      .fancy-hide 
+                        .fancy-content#parking
+                          %h4 Where can I park?
+                          %p 
+                            Camden is a pain for parking. We'd recommend public transport. 
+                          %p
+                            Camden council 
+                            %a{:href=>"http://maps.camden.gov.uk/parkingbays/"} has a list of public parking bays
+                            , but I wouldn't count on finding a space close by.
+                    .even
+                      %b Q:
+                      %a{:href => "#married"} When are you actually getting married?
+                      .fancy-hide 
+                        .fancy-content#married
+                          %h4 When are you actually getting married?
+                          %p We're getting married in Brighton on the 21st of June 2014
+                    .even
+                      %b Q:
+                      %a{:href => "#bar"} A free bar? All night? Really?
+                      .fancy-hide 
+                        .fancy-content#bar
+                          %h4 A free bar? All night? Really?
+                          %p You bet! That's how we roll
                     
             %br.clear/
             .pug{:style=>"display:none"}
@@ -354,6 +376,12 @@
       $("#titleCast a, #combined-photos a").fancybox({
             'overlayShow'     :    false
         });
+      $(".faq a").fancybox(
+      {'transitionIn' : 'elastic',
+    'transitionOut' : 'elastic',
+    'speedIn'   : 600, 
+    'speedOut'    : 200, 
+    'overlayShow' : true});
       var success = function() {
         $('.pug').show(5000);
       }

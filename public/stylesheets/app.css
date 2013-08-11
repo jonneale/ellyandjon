@@ -5,3 +5,6 @@
 	font-weight: bold;
 	display: block;
 }
+.fancy-hide {
+	display:none;
+}
