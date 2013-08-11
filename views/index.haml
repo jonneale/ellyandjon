@@ -385,7 +385,7 @@
                     
             %br.clear/
             .pug{:style=>"display:none"}
-              %img{:src=>"/images/pug.jpg"}
+              %a.pug-click{:href => "/images/pug.jpg"}   
           #footer.ft
             %hr{:size => "1", :width => "100%"}/
             #rvi-div
@@ -404,14 +404,23 @@
       $("#titleCast a, #combined-photos a").fancybox({
             'overlayShow'     :    false
         });
-      $(".faq a").fancybox(
-      {'transitionIn' : 'elastic',
-    'transitionOut' : 'elastic',
-    'speedIn'   : 600, 
-    'speedOut'    : 200, 
-    'overlayShow' : true});
-      var success = function() {
-        $('.pug').show(5000);
+      $(".faq a").fancybox({
+        'transitionIn' : 'elastic',
+        'transitionOut' : 'elastic',
+        'speedIn'   : 600, 
+        'speedOut'    : 200, 
+        'overlayShow' : true});
+      
+      $('.pug-click').fancybox({
+        'transitionIn' : 'elastic',
+        'transitionOut' : 'elastic',
+        'speedIn'   : 300, 
+        'speedOut'    : 200, 
+        'overlayShow' : true});
+
+      var clickPug = function() {
+        $(".pug-click").trigger('click')
       }
-      var konami = new Konami(success);
+      var konami = new Konami(clickPug);
+      
     });
