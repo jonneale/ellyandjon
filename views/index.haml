@@ -131,9 +131,11 @@
                   %h3.inline At a glance
                   19th July 2014
                   %br/
-                  Prince Albert, Camden, NW1 0SG
+                  The Award Winning Prince Albert, Camden, NW1 0SG
                   %br/
                   Food and drinks provided
+                  %br/
+                  The whole pub will be ours
                   %br/
                   Dress will be smart
                 .aux-content-widget-3.links.subnav{:div => "at-a-glance"}
@@ -321,6 +323,13 @@
                   .txt-block
                     %h4.inline Transportation:
                     Next to Camden Road station on the London Overground
+                  .txt-block
+                    %h4.inline Awards:
+                    %a{:href=>'/images/best-freehouse.jpg', :id => 'pub'}
+                      Winner, 'Best Freehouse in London and SE', BT Sport Great British Pub awards 2013
+                  .txt-block
+                    %h4.inline Venue space:
+                    We will have the entire pub to ourselves
                 #titleTechnicalSpecs.article
                   %h2 Technical Specs
                   .txt-block
@@ -432,7 +441,7 @@
   ga('send', 'pageview');
 
     $(document).ready( function(){
-      $("#titleCast a, #combined-photos a").fancybox({
+      $("#titleCast a, #combined-photos a, #pub").fancybox({
             'overlayShow'     :    false
         });
       $(".faq a").fancybox({
